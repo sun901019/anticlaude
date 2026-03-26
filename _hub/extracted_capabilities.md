@@ -1,0 +1,566 @@
+# 🧠 原始技能庫盤點報告 (Raw Capability Extraction)
+
+> 本文件由掃描腳本自動生成，列出 9 個庫中所有被抓取到的 Markdown 檔案，以作為後續手動融合 (Composite) 的材料清單。
+
+**總共掃描到: 507 個潛在技能檔案**
+
+## 📦 Repository: agency-agents
+*共發現 142 個潛在技能檔案*
+
+- **PULL_REQUEST_TEMPLATE.md** (`.github\PULL_REQUEST_TEMPLATE.md`) → 🏷️ 推測分類：`data_processing, coding_agent`
+- **design-brand-guardian.md** (`design\design-brand-guardian.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, project_planning, coding_agent`
+- **design-image-prompt-engineer.md** (`design\design-image-prompt-engineer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **design-inclusive-visuals-specialist.md** (`design\design-inclusive-visuals-specialist.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **design-ui-designer.md** (`design\design-ui-designer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **design-ux-architect.md** (`design\design-ux-architect.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **design-ux-researcher.md** (`design\design-ux-researcher.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, presentation_ui, data_processing, coding_agent`
+- **design-visual-storyteller.md** (`design\design-visual-storyteller.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, presentation_ui, data_processing, coding_agent`
+- **design-whimsy-injector.md** (`design\design-whimsy-injector.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **engineering-ai-engineer.md** (`engineering\engineering-ai-engineer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **engineering-autonomous-optimization-architect.md** (`engineering\engineering-autonomous-optimization-architect.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **engineering-backend-architect.md** (`engineering\engineering-backend-architect.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **engineering-data-engineer.md** (`engineering\engineering-data-engineer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **engineering-devops-automator.md** (`engineering\engineering-devops-automator.md`) → 🏷️ 推測分類：`text_humanization, project_planning, coding_agent`
+- **engineering-embedded-firmware-engineer.md** (`engineering\engineering-embedded-firmware-engineer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **engineering-frontend-developer.md** (`engineering\engineering-frontend-developer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **engineering-incident-response-commander.md** (`engineering\engineering-incident-response-commander.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, coding_agent`
+- **engineering-mobile-app-builder.md** (`engineering\engineering-mobile-app-builder.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **engineering-rapid-prototyper.md** (`engineering\engineering-rapid-prototyper.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **engineering-security-engineer.md** (`engineering\engineering-security-engineer.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **engineering-senior-developer.md** (`engineering\engineering-senior-developer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **engineering-solidity-smart-contract-engineer.md** (`engineering\engineering-solidity-smart-contract-engineer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **engineering-technical-writer.md** (`engineering\engineering-technical-writer.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing, coding_agent`
+- **engineering-threat-detection-engineer.md** (`engineering\engineering-threat-detection-engineer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **engineering-wechat-mini-program-developer.md** (`engineering\engineering-wechat-mini-program-developer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **nexus-spatial-discovery.md** (`examples\nexus-spatial-discovery.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization, presentation_ui, project_planning`
+- **workflow-landing-page.md** (`examples\workflow-landing-page.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, project_planning, coding_agent`
+- **workflow-startup-mvp.md** (`examples\workflow-startup-mvp.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, seo_optimization, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **workflow-with-memory.md** (`examples\workflow-with-memory.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **game-audio-engineer.md** (`game-development\game-audio-engineer.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **game-designer.md** (`game-development\game-designer.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **level-designer.md** (`game-development\level-designer.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **narrative-designer.md** (`game-development\narrative-designer.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **technical-artist.md** (`game-development\technical-artist.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **godot-gameplay-scripter.md** (`game-development\godot\godot-gameplay-scripter.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning, coding_agent`
+- **godot-multiplayer-engineer.md** (`game-development\godot\godot-multiplayer-engineer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **godot-shader-developer.md** (`game-development\godot\godot-shader-developer.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing, coding_agent`
+- **roblox-avatar-creator.md** (`game-development\roblox-studio\roblox-avatar-creator.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, coding_agent`
+- **roblox-experience-designer.md** (`game-development\roblox-studio\roblox-experience-designer.md`) → 🏷️ 推測分類：`marketing_strategy, presentation_ui, data_processing, coding_agent`
+- **roblox-systems-scripter.md** (`game-development\roblox-studio\roblox-systems-scripter.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **unity-architect.md** (`game-development\unity\unity-architect.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **unity-editor-tool-developer.md** (`game-development\unity\unity-editor-tool-developer.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, coding_agent`
+- **unity-multiplayer-engineer.md** (`game-development\unity\unity-multiplayer-engineer.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **unity-shader-graph-artist.md** (`game-development\unity\unity-shader-graph-artist.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **unreal-multiplayer-architect.md** (`game-development\unreal-engine\unreal-multiplayer-architect.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **unreal-systems-engineer.md** (`game-development\unreal-engine\unreal-systems-engineer.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **unreal-technical-artist.md** (`game-development\unreal-engine\unreal-technical-artist.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, project_planning, coding_agent`
+- **unreal-world-builder.md** (`game-development\unreal-engine\unreal-world-builder.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **backend-architect-with-memory.md** (`integrations\mcp-memory\backend-architect-with-memory.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **marketing-app-store-optimizer.md** (`marketing\marketing-app-store-optimizer.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **marketing-baidu-seo-specialist.md** (`marketing\marketing-baidu-seo-specialist.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, seo_optimization, text_humanization, data_processing, coding_agent`
+- **marketing-bilibili-content-strategist.md** (`marketing\marketing-bilibili-content-strategist.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, text_humanization, presentation_ui, coding_agent`
+- **marketing-carousel-growth-engine.md** (`marketing\marketing-carousel-growth-engine.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, text_humanization, data_processing, coding_agent`
+- **marketing-china-ecommerce-operator.md** (`marketing\marketing-china-ecommerce-operator.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing, coding_agent`
+- **marketing-content-creator.md** (`marketing\marketing-content-creator.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, data_processing, project_planning, coding_agent`
+- **marketing-growth-hacker.md** (`marketing\marketing-growth-hacker.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, seo_optimization, presentation_ui, data_processing, coding_agent`
+- **marketing-instagram-curator.md** (`marketing\marketing-instagram-curator.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, presentation_ui, data_processing, project_planning, coding_agent`
+- **marketing-kuaishou-strategist.md** (`marketing\marketing-kuaishou-strategist.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, coding_agent`
+- **marketing-linkedin-content-creator.md** (`marketing\marketing-linkedin-content-creator.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, presentation_ui, coding_agent`
+- **marketing-reddit-community-builder.md** (`marketing\marketing-reddit-community-builder.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, presentation_ui, coding_agent`
+- **marketing-seo-specialist.md** (`marketing\marketing-seo-specialist.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **marketing-social-media-strategist.md** (`marketing\marketing-social-media-strategist.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, presentation_ui, project_planning, coding_agent`
+- **marketing-tiktok-strategist.md** (`marketing\marketing-tiktok-strategist.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, presentation_ui, data_processing, coding_agent`
+- **marketing-twitter-engager.md** (`marketing\marketing-twitter-engager.md`) → 🏷️ 推測分類：`marketing_strategy, presentation_ui, data_processing, project_planning, coding_agent`
+- **marketing-wechat-official-account.md** (`marketing\marketing-wechat-official-account.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, presentation_ui, data_processing, project_planning, coding_agent`
+- **marketing-xiaohongshu-specialist.md** (`marketing\marketing-xiaohongshu-specialist.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, project_planning, coding_agent`
+- **marketing-zhihu-strategist.md** (`marketing\marketing-zhihu-strategist.md`) → 🏷️ 推測分類：`marketing_strategy, presentation_ui, project_planning, coding_agent`
+- **paid-media-auditor.md** (`paid-media\paid-media-auditor.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, project_planning, coding_agent`
+- **paid-media-creative-strategist.md** (`paid-media\paid-media-creative-strategist.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **paid-media-paid-social-strategist.md** (`paid-media\paid-media-paid-social-strategist.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, presentation_ui, project_planning, coding_agent`
+- **paid-media-ppc-strategist.md** (`paid-media\paid-media-ppc-strategist.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **paid-media-programmatic-buyer.md** (`paid-media\paid-media-programmatic-buyer.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **paid-media-search-query-analyst.md** (`paid-media\paid-media-search-query-analyst.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **paid-media-tracking-specialist.md** (`paid-media\paid-media-tracking-specialist.md`) → 🏷️ 推測分類：`seo_optimization, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **product-behavioral-nudge-engine.md** (`product\product-behavioral-nudge-engine.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **product-feedback-synthesizer.md** (`product\product-feedback-synthesizer.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, presentation_ui, data_processing, coding_agent`
+- **product-sprint-prioritizer.md** (`product\product-sprint-prioritizer.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, presentation_ui, data_processing, project_planning, coding_agent`
+- **product-trend-researcher.md** (`product\product-trend-researcher.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, seo_optimization, text_humanization, data_processing, coding_agent`
+- **project-management-experiment-tracker.md** (`project-management\project-management-experiment-tracker.md`) → 🏷️ 推測分類：`research_analysis, presentation_ui, data_processing, project_planning, coding_agent`
+- **project-management-jira-workflow-steward.md** (`project-management\project-management-jira-workflow-steward.md`) → 🏷️ 推測分類：`marketing_strategy, project_planning, coding_agent`
+- **project-management-project-shepherd.md** (`project-management\project-management-project-shepherd.md`) → 🏷️ 推測分類：`project_planning, coding_agent`
+- **project-management-studio-operations.md** (`project-management\project-management-studio-operations.md`) → 🏷️ 推測分類：`text_humanization, project_planning, coding_agent`
+- **project-management-studio-producer.md** (`project-management\project-management-studio-producer.md`) → 🏷️ 推測分類：`project_planning, coding_agent`
+- **project-manager-senior.md** (`project-management\project-manager-senior.md`) → 🏷️ 推測分類：`research_analysis, text_humanization, presentation_ui, project_planning, coding_agent`
+- **sales-account-strategist.md** (`sales\sales-account-strategist.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, project_planning, coding_agent`
+- **sales-coach.md** (`sales\sales-coach.md`) → 🏷️ 推測分類：`marketing_strategy, project_planning, coding_agent`
+- **sales-deal-strategist.md** (`sales\sales-deal-strategist.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **sales-discovery-coach.md** (`sales\sales-discovery-coach.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **sales-engineer.md** (`sales\sales-engineer.md`) → 🏷️ 推測分類：`research_analysis, presentation_ui, coding_agent`
+- **sales-outbound-strategist.md** (`sales\sales-outbound-strategist.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **sales-pipeline-analyst.md** (`sales\sales-pipeline-analyst.md`) → 🏷️ 推測分類：`research_analysis, data_processing, coding_agent`
+- **sales-proposal-strategist.md** (`sales\sales-proposal-strategist.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **macos-spatial-metal-engineer.md** (`spatial-computing\macos-spatial-metal-engineer.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **terminal-integration-specialist.md** (`spatial-computing\terminal-integration-specialist.md`) → 🏷️ 推測分類：`seo_optimization, presentation_ui, coding_agent`
+- **visionos-spatial-engineer.md** (`spatial-computing\visionos-spatial-engineer.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, coding_agent`
+- **xr-cockpit-interaction-specialist.md** (`spatial-computing\xr-cockpit-interaction-specialist.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **xr-immersive-developer.md** (`spatial-computing\xr-immersive-developer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **xr-interface-architect.md** (`spatial-computing\xr-interface-architect.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **accounts-payable-agent.md** (`specialized\accounts-payable-agent.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **agentic-identity-trust.md** (`specialized\agentic-identity-trust.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **agents-orchestrator.md** (`specialized\agents-orchestrator.md`) → 🏷️ 推測分類：`text_humanization, project_planning, coding_agent`
+- **blockchain-security-auditor.md** (`specialized\blockchain-security-auditor.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, coding_agent`
+- **compliance-auditor.md** (`specialized\compliance-auditor.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **data-consolidation-agent.md** (`specialized\data-consolidation-agent.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **identity-graph-operator.md** (`specialized\identity-graph-operator.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **lsp-index-engineer.md** (`specialized\lsp-index-engineer.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **report-distribution-agent.md** (`specialized\report-distribution-agent.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **sales-data-extraction-agent.md** (`specialized\sales-data-extraction-agent.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **specialized-cultural-intelligence-strategist.md** (`specialized\specialized-cultural-intelligence-strategist.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, presentation_ui, data_processing, coding_agent`
+- **specialized-developer-advocate.md** (`specialized\specialized-developer-advocate.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, presentation_ui, coding_agent`
+- **specialized-model-qa.md** (`specialized\specialized-model-qa.md`) → 🏷️ 推測分類：`research_analysis, presentation_ui, data_processing, coding_agent`
+- **zk-steward.md** (`specialized\zk-steward.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **EXECUTIVE-BRIEF.md** (`strategy\EXECUTIVE-BRIEF.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, project_planning`
+- **nexus-strategy.md** (`strategy\nexus-strategy.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, project_planning`
+- **QUICKSTART.md** (`strategy\QUICKSTART.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, project_planning`
+- **agent-activation-prompts.md** (`strategy\coordination\agent-activation-prompts.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **handoff-templates.md** (`strategy\coordination\handoff-templates.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning`
+- **phase-0-discovery.md** (`strategy\playbooks\phase-0-discovery.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, data_processing, project_planning`
+- **phase-1-strategy.md** (`strategy\playbooks\phase-1-strategy.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, presentation_ui, project_planning, coding_agent`
+- **phase-2-foundation.md** (`strategy\playbooks\phase-2-foundation.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **phase-3-build.md** (`strategy\playbooks\phase-3-build.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **phase-4-hardening.md** (`strategy\playbooks\phase-4-hardening.md`) → 🏷️ 推測分類：`presentation_ui, project_planning`
+- **phase-5-launch.md** (`strategy\playbooks\phase-5-launch.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization`
+- **phase-6-operate.md** (`strategy\playbooks\phase-6-operate.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **scenario-enterprise-feature.md** (`strategy\runbooks\scenario-enterprise-feature.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, presentation_ui, project_planning, coding_agent`
+- **scenario-incident-response.md** (`strategy\runbooks\scenario-incident-response.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, presentation_ui, data_processing`
+- **scenario-marketing-campaign.md** (`strategy\runbooks\scenario-marketing-campaign.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing`
+- **scenario-startup-mvp.md** (`strategy\runbooks\scenario-startup-mvp.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **support-analytics-reporter.md** (`support\support-analytics-reporter.md`) → 🏷️ 推測分類：`research_analysis, data_processing, coding_agent`
+- **support-executive-summary-generator.md** (`support\support-executive-summary-generator.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, coding_agent`
+- **support-finance-tracker.md** (`support\support-finance-tracker.md`) → 🏷️ 推測分類：`research_analysis, text_humanization, data_processing, project_planning, coding_agent`
+- **support-infrastructure-maintainer.md** (`support\support-infrastructure-maintainer.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **support-legal-compliance-checker.md** (`support\support-legal-compliance-checker.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, project_planning, coding_agent`
+- **support-support-responder.md** (`support\support-support-responder.md`) → 🏷️ 推測分類：`coding_agent`
+- **testing-accessibility-auditor.md** (`testing\testing-accessibility-auditor.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **testing-api-tester.md** (`testing\testing-api-tester.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **testing-evidence-collector.md** (`testing\testing-evidence-collector.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **testing-performance-benchmarker.md** (`testing\testing-performance-benchmarker.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **testing-reality-checker.md** (`testing\testing-reality-checker.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **testing-test-results-analyzer.md** (`testing\testing-test-results-analyzer.md`) → 🏷️ 推測分類：`research_analysis, text_humanization, data_processing, coding_agent`
+- **testing-tool-evaluator.md** (`testing\testing-tool-evaluator.md`) → 🏷️ 推測分類：`research_analysis, coding_agent`
+- **testing-workflow-optimizer.md** (`testing\testing-workflow-optimizer.md`) → 🏷️ 推測分類：`coding_agent`
+
+---
+
+## 📦 Repository: awesome-agent-skills
+*共發現 5 個潛在技能檔案*
+
+- **README.es.md** (`README.es.md`) → 🏷️ 推測分類：`uncategorized`
+- **README.ja.md** (`README.ja.md`) → 🏷️ 推測分類：`text_humanization`
+- **README.ko.md** (`README.ko.md`) → 🏷️ 推測分類：`text_humanization`
+- **README.zh-CN.md** (`README.zh-CN.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **README.zh-TW.md** (`README.zh-TW.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+
+---
+
+## 📦 Repository: aws-agent-skills-libukai
+*共發現 54 個潛在技能檔案*
+
+- **CLAUDE.md** (`CLAUDE.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **Claude-Skills-完全构建指南.md** (`docs\Claude-Skills-完全构建指南.md`) → 🏷️ 推測分類：`presentation_ui`
+- **excalidraw-mcp-guide.md** (`docs\excalidraw-mcp-guide.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning, coding_agent`
+- **README_EN.md** (`docs\README_EN.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, project_planning`
+- **README_JA.md** (`docs\README_JA.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization`
+- **check-integration.md** (`plugins\agent-skills-toolkit\commands\check-integration.md`) → 🏷️ 推測分類：`coding_agent`
+- **create-skill.md** (`plugins\agent-skills-toolkit\commands\create-skill.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **improve-skill.md** (`plugins\agent-skills-toolkit\commands\improve-skill.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **optimize-description.md** (`plugins\agent-skills-toolkit\commands\optimize-description.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **test-skill.md** (`plugins\agent-skills-toolkit\commands\test-skill.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **skill.md** (`plugins\agent-skills-toolkit\skills\plugin-integration-checker\skill.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **ENHANCEMENT_SUMMARY.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\ENHANCEMENT_SUMMARY.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **SELF_CHECK_REPORT.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\SELF_CHECK_REPORT.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **SKILL.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\SKILL.md`) → 🏷️ 推測分類：`research_analysis, presentation_ui, coding_agent`
+- **UPGRADE_TO_EXCELLENT_REPORT.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\UPGRADE_TO_EXCELLENT_REPORT.md`) → 🏷️ 推測分類：`research_analysis, coding_agent`
+- **analyzer.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\agents\analyzer.md`) → 🏷️ 推測分類：`research_analysis, content_creation, data_processing, coding_agent`
+- **comparator.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\agents\comparator.md`) → 🏷️ 推測分類：`content_creation, project_planning`
+- **grader.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\agents\grader.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **constraints_and_rules.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\references\constraints_and_rules.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **design_principles.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\references\design_principles.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **quick_checklist.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\references\quick_checklist.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **schemas.md** (`plugins\agent-skills-toolkit\skills\skill-creator-pro\references\schemas.md`) → 🏷️ 推測分類：`research_analysis, content_creation, data_processing, coding_agent`
+- **SKILL.md** (`plugins\claude-code-setting\skills\mcp-config\SKILL.md`) → 🏷️ 推測分類：`data_processing, project_planning, coding_agent`
+- **httpyac.md** (`plugins\vscode-extensions-toolkit\commands\httpyac.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **port-monitor.md** (`plugins\vscode-extensions-toolkit\commands\port-monitor.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning, coding_agent`
+- **sftp.md** (`plugins\vscode-extensions-toolkit\commands\sftp.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **SKILL.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\SKILL.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **ADVANCED_FEATURES.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\ADVANCED_FEATURES.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning`
+- **AUTHENTICATION_PATTERNS.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\AUTHENTICATION_PATTERNS.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **CLI_CICD.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\CLI_CICD.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning`
+- **COMMON_MISTAKES.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\COMMON_MISTAKES.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **DOCUMENTATION.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\DOCUMENTATION.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **ENVIRONMENT_MANAGEMENT.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\ENVIRONMENT_MANAGEMENT.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning, coding_agent`
+- **REQUEST_DEPENDENCIES.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\REQUEST_DEPENDENCIES.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **SCRIPTING_TESTING.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\SCRIPTING_TESTING.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **SECURITY.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\SECURITY.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning`
+- **SYNTAX.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\SYNTAX.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **SYNTAX_CHEATSHEET.md** (`plugins\vscode-extensions-toolkit\skills\vscode-httpyac-config\references\SYNTAX_CHEATSHEET.md`) → 🏷️ 推測分類：`content_creation, data_processing, coding_agent`
+- **SKILL.md** (`plugins\vscode-extensions-toolkit\skills\vscode-port-monitor-config\SKILL.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **advanced-config.md** (`plugins\vscode-extensions-toolkit\skills\vscode-port-monitor-config\references\advanced-config.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, project_planning`
+- **configuration-options.md** (`plugins\vscode-extensions-toolkit\skills\vscode-port-monitor-config\references\configuration-options.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, coding_agent`
+- **integrations.md** (`plugins\vscode-extensions-toolkit\skills\vscode-port-monitor-config\references\integrations.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing, coding_agent`
+- **troubleshooting.md** (`plugins\vscode-extensions-toolkit\skills\vscode-port-monitor-config\references\troubleshooting.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **SKILL.md** (`plugins\vscode-extensions-toolkit\skills\vscode-sftp-config\SKILL.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **deploy-checklist.md** (`plugins\vscode-extensions-toolkit\skills\vscode-sftp-config\assets\deploy-checklist.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **nginx-best-practices.md** (`plugins\vscode-extensions-toolkit\skills\vscode-sftp-config\references\nginx-best-practices.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing`
+- **ssh-config.md** (`plugins\vscode-extensions-toolkit\skills\vscode-sftp-config\references\ssh-config.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **ssl-security.md** (`plugins\vscode-extensions-toolkit\skills\vscode-sftp-config\references\ssl-security.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **SKILL.md** (`skills\obsidian-to-x\SKILL.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing, coding_agent`
+- **articles.md** (`skills\obsidian-to-x\references\articles.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **obsidian-conversion.md** (`skills\obsidian-to-x\references\obsidian-conversion.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **obsidian-integration.md** (`skills\obsidian-to-x\references\obsidian-integration.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **regular-posts.md** (`skills\obsidian-to-x\references\regular-posts.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, coding_agent`
+- **troubleshooting.md** (`skills\obsidian-to-x\references\troubleshooting.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+
+---
+
+## 📦 Repository: frontend-slides
+*共發現 4 個潛在技能檔案*
+
+- **animation-patterns.md** (`animation-patterns.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **html-template.md** (`html-template.md`) → 🏷️ 推測分類：`content_creation, presentation_ui`
+- **SKILL.md** (`SKILL.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, project_planning, coding_agent`
+- **STYLE_PRESETS.md** (`STYLE_PRESETS.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+
+---
+
+## 📦 Repository: geo-seo-claude
+*共發現 17 個潛在技能檔案*
+
+- **geo-ai-visibility.md** (`agents\geo-ai-visibility.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, data_processing, coding_agent`
+- **geo-content.md** (`agents\geo-content.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, coding_agent`
+- **geo-platform-analysis.md** (`agents\geo-platform-analysis.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, coding_agent`
+- **geo-schema.md** (`agents\geo-schema.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **geo-technical.md** (`agents\geo-technical.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, coding_agent`
+- **SKILL.md** (`geo\SKILL.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **SKILL.md** (`skills\geo-audit\SKILL.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, coding_agent`
+- **SKILL.md** (`skills\geo-brand-mentions\SKILL.md`) → 🏷️ 推測分類：`seo_optimization, text_humanization, coding_agent`
+- **SKILL.md** (`skills\geo-citability\SKILL.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, coding_agent`
+- **SKILL.md** (`skills\geo-content\SKILL.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **SKILL.md** (`skills\geo-crawlers\SKILL.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **SKILL.md** (`skills\geo-llmstxt\SKILL.md`) → 🏷️ 推測分類：`research_analysis, content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **SKILL.md** (`skills\geo-platform-optimizer\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, coding_agent`
+- **SKILL.md** (`skills\geo-report\SKILL.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization, data_processing, coding_agent`
+- **SKILL.md** (`skills\geo-report-pdf\SKILL.md`) → 🏷️ 推測分類：`seo_optimization, presentation_ui, data_processing, coding_agent`
+- **SKILL.md** (`skills\geo-schema\SKILL.md`) → 🏷️ 推測分類：`seo_optimization, text_humanization, data_processing, coding_agent`
+- **SKILL.md** (`skills\geo-technical\SKILL.md`) → 🏷️ 推測分類：`seo_optimization, text_humanization, presentation_ui, coding_agent`
+
+---
+
+## 📦 Repository: Humanizer-zh
+*共發現 1 個潛在技能檔案*
+
+- **SKILL.md** (`SKILL.md`) → 🏷️ 推測分類：`research_analysis, text_humanization, data_processing, project_planning, coding_agent`
+
+---
+
+## 📦 Repository: marketingskills
+*共發現 160 個潛在技能檔案*
+
+- **AGENTS.md** (`AGENTS.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing, coding_agent`
+- **CLAUDE.md** (`CLAUDE.md`) → 🏷️ 推測分類：`uncategorized`
+- **VERSIONS.md** (`VERSIONS.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization, text_humanization`
+- **documentation.md** (`.github\PULL_REQUEST_TEMPLATE\documentation.md`) → 🏷️ 推測分類：`data_processing`
+- **new-skill.md** (`.github\PULL_REQUEST_TEMPLATE\new-skill.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **skill-update.md** (`.github\PULL_REQUEST_TEMPLATE\skill-update.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **SKILL.md** (`skills\ab-test-setup\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, presentation_ui, data_processing, coding_agent`
+- **sample-size-guide.md** (`skills\ab-test-setup\references\sample-size-guide.md`) → 🏷️ 推測分類：`content_creation, presentation_ui`
+- **test-templates.md** (`skills\ab-test-setup\references\test-templates.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing, project_planning`
+- **SKILL.md** (`skills\ad-creative\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing, coding_agent`
+- **generative-tools.md** (`skills\ad-creative\references\generative-tools.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **platform-specs.md** (`skills\ad-creative\references\platform-specs.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **SKILL.md** (`skills\ai-seo\SKILL.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, data_processing, coding_agent`
+- **content-patterns.md** (`skills\ai-seo\references\content-patterns.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, data_processing`
+- **platform-ranking-factors.md** (`skills\ai-seo\references\platform-ranking-factors.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **SKILL.md** (`skills\analytics-tracking\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, data_processing, project_planning, coding_agent`
+- **event-library.md** (`skills\analytics-tracking\references\event-library.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, coding_agent`
+- **ga4-implementation.md** (`skills\analytics-tracking\references\ga4-implementation.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **gtm-implementation.md** (`skills\analytics-tracking\references\gtm-implementation.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **SKILL.md** (`skills\churn-prevention\SKILL.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **cancel-flow-patterns.md** (`skills\churn-prevention\references\cancel-flow-patterns.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui`
+- **dunning-playbook.md** (`skills\churn-prevention\references\dunning-playbook.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, coding_agent`
+- **SKILL.md** (`skills\cold-email\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing, project_planning, coding_agent`
+- **benchmarks.md** (`skills\cold-email\references\benchmarks.md`) → 🏷️ 推測分類：`text_humanization, data_processing`
+- **follow-up-sequences.md** (`skills\cold-email\references\follow-up-sequences.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui`
+- **frameworks.md** (`skills\cold-email\references\frameworks.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **personalization.md** (`skills\cold-email\references\personalization.md`) → 🏷️ 推測分類：`research_analysis, text_humanization`
+- **subject-lines.md** (`skills\cold-email\references\subject-lines.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **SKILL.md** (`skills\competitor-alternatives\SKILL.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **content-architecture.md** (`skills\competitor-alternatives\references\content-architecture.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, text_humanization, data_processing`
+- **templates.md** (`skills\competitor-alternatives\references\templates.md`) → 🏷️ 推測分類：`research_analysis, content_creation, presentation_ui, coding_agent`
+- **SKILL.md** (`skills\content-strategy\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, presentation_ui, data_processing, project_planning, coding_agent`
+- **SKILL.md** (`skills\copy-editing\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, data_processing, coding_agent`
+- **plain-english-alternatives.md** (`skills\copy-editing\references\plain-english-alternatives.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui`
+- **SKILL.md** (`skills\copywriting\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing, coding_agent`
+- **copy-frameworks.md** (`skills\copywriting\references\copy-frameworks.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization`
+- **natural-transitions.md** (`skills\copywriting\references\natural-transitions.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui`
+- **SKILL.md** (`skills\email-sequence\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing, coding_agent`
+- **copy-guidelines.md** (`skills\email-sequence\references\copy-guidelines.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **email-types.md** (`skills\email-sequence\references\email-types.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui`
+- **sequence-templates.md** (`skills\email-sequence\references\sequence-templates.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui`
+- **SKILL.md** (`skills\form-cro\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, data_processing, coding_agent`
+- **SKILL.md** (`skills\free-tool-strategy\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, presentation_ui, data_processing, coding_agent`
+- **tool-types.md** (`skills\free-tool-strategy\references\tool-types.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, coding_agent`
+- **SKILL.md** (`skills\launch-strategy\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing, coding_agent`
+- **SKILL.md** (`skills\marketing-ideas\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing, coding_agent`
+- **ideas-by-category.md** (`skills\marketing-ideas\references\ideas-by-category.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **SKILL.md** (`skills\marketing-psychology\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, data_processing, coding_agent`
+- **SKILL.md** (`skills\onboarding-cro\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **experiments.md** (`skills\onboarding-cro\references\experiments.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **SKILL.md** (`skills\page-cro\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, data_processing, coding_agent`
+- **experiments.md** (`skills\page-cro\references\experiments.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing`
+- **SKILL.md** (`skills\paid-ads\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing, coding_agent`
+- **ad-copy-templates.md** (`skills\paid-ads\references\ad-copy-templates.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, presentation_ui`
+- **audience-targeting.md** (`skills\paid-ads\references\audience-targeting.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui`
+- **platform-setup-checklists.md** (`skills\paid-ads\references\platform-setup-checklists.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing, project_planning`
+- **SKILL.md** (`skills\paywall-upgrade-cro\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, data_processing, coding_agent`
+- **experiments.md** (`skills\paywall-upgrade-cro\references\experiments.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing`
+- **SKILL.md** (`skills\popup-cro\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, data_processing, coding_agent`
+- **SKILL.md** (`skills\pricing-strategy\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, presentation_ui, data_processing, coding_agent`
+- **research-methods.md** (`skills\pricing-strategy\references\research-methods.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization`
+- **tier-structure.md** (`skills\pricing-strategy\references\tier-structure.md`) → 🏷️ 推測分類：`content_creation`
+- **SKILL.md** (`skills\product-marketing-context\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, data_processing, project_planning, coding_agent`
+- **SKILL.md** (`skills\programmatic-seo\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, presentation_ui, data_processing, project_planning, coding_agent`
+- **playbooks.md** (`skills\programmatic-seo\references\playbooks.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, presentation_ui, data_processing`
+- **SKILL.md** (`skills\referral-program\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, presentation_ui, data_processing, coding_agent`
+- **affiliate-programs.md** (`skills\referral-program\references\affiliate-programs.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, coding_agent`
+- **program-examples.md** (`skills\referral-program\references\program-examples.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **SKILL.md** (`skills\revops\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing, coding_agent`
+- **automation-playbooks.md** (`skills\revops\references\automation-playbooks.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, project_planning`
+- **lifecycle-definitions.md** (`skills\revops\references\lifecycle-definitions.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing`
+- **routing-rules.md** (`skills\revops\references\routing-rules.md`) → 🏷️ 推測分類：`text_humanization`
+- **scoring-models.md** (`skills\revops\references\scoring-models.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning`
+- **SKILL.md** (`skills\sales-enablement\SKILL.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, text_humanization, data_processing, coding_agent`
+- **deck-frameworks.md** (`skills\sales-enablement\references\deck-frameworks.md`) → 🏷️ 推測分類：`research_analysis, text_humanization, presentation_ui, data_processing`
+- **demo-scripts.md** (`skills\sales-enablement\references\demo-scripts.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, presentation_ui, coding_agent`
+- **objection-library.md** (`skills\sales-enablement\references\objection-library.md`) → 🏷️ 推測分類：`research_analysis, presentation_ui`
+- **one-pager-templates.md** (`skills\sales-enablement\references\one-pager-templates.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **SKILL.md** (`skills\schema-markup\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, data_processing, coding_agent`
+- **schema-examples.md** (`skills\schema-markup\references\schema-examples.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, data_processing`
+- **SKILL.md** (`skills\seo-audit\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, presentation_ui, data_processing, coding_agent`
+- **ai-writing-detection.md** (`skills\seo-audit\references\ai-writing-detection.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing`
+- **SKILL.md** (`skills\signup-flow-cro\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, data_processing, coding_agent`
+- **SKILL.md** (`skills\site-architecture\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, presentation_ui, data_processing, project_planning, coding_agent`
+- **mermaid-templates.md** (`skills\site-architecture\references\mermaid-templates.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, presentation_ui`
+- **navigation-patterns.md** (`skills\site-architecture\references\navigation-patterns.md`) → 🏷️ 推測分類：`content_creation, text_humanization`
+- **site-type-templates.md** (`skills\site-architecture\references\site-type-templates.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, presentation_ui`
+- **SKILL.md** (`skills\social-content\SKILL.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, presentation_ui, data_processing, project_planning, coding_agent`
+- **platforms.md** (`skills\social-content\references\platforms.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing, project_planning`
+- **post-templates.md** (`skills\social-content\references\post-templates.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing, coding_agent`
+- **reverse-engineering.md** (`skills\social-content\references\reverse-engineering.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization`
+- **REGISTRY.md** (`tools\REGISTRY.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui`
+- **activecampaign.md** (`tools\integrations\activecampaign.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, coding_agent`
+- **adobe-analytics.md** (`tools\integrations\adobe-analytics.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **ahrefs.md** (`tools\integrations\ahrefs.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization`
+- **airops.md** (`tools\integrations\airops.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, presentation_ui, data_processing`
+- **amplitude.md** (`tools\integrations\amplitude.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **apollo.md** (`tools\integrations\apollo.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, data_processing, project_planning`
+- **beehiiv.md** (`tools\integrations\beehiiv.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **brevo.md** (`tools\integrations\brevo.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization`
+- **buffer.md** (`tools\integrations\buffer.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **calendly.md** (`tools\integrations\calendly.md`) → 🏷️ 推測分類：`text_humanization`
+- **clay.md** (`tools\integrations\clay.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **clearbit.md** (`tools\integrations\clearbit.md`) → 🏷️ 推測分類：`text_humanization, data_processing`
+- **close.md** (`tools\integrations\close.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, presentation_ui, project_planning, coding_agent`
+- **coupler.md** (`tools\integrations\coupler.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing`
+- **crossbeam.md** (`tools\integrations\crossbeam.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing`
+- **customer-io.md** (`tools\integrations\customer-io.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, coding_agent`
+- **dataforseo.md** (`tools\integrations\dataforseo.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization, text_humanization, data_processing, coding_agent`
+- **demio.md** (`tools\integrations\demio.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **dub-co.md** (`tools\integrations\dub-co.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, coding_agent`
+- **g2.md** (`tools\integrations\g2.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, data_processing`
+- **ga4.md** (`tools\integrations\ga4.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing`
+- **google-ads.md** (`tools\integrations\google-ads.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, coding_agent`
+- **google-search-console.md** (`tools\integrations\google-search-console.md`) → 🏷️ 推測分類：`content_creation, seo_optimization, text_humanization, coding_agent`
+- **hotjar.md** (`tools\integrations\hotjar.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, coding_agent`
+- **hubspot.md** (`tools\integrations\hubspot.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, project_planning`
+- **hunter.md** (`tools\integrations\hunter.md`) → 🏷️ 推測分類：`seo_optimization, text_humanization, presentation_ui`
+- **instantly.md** (`tools\integrations\instantly.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui`
+- **intercom.md** (`tools\integrations\intercom.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **keywords-everywhere.md** (`tools\integrations\keywords-everywhere.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, seo_optimization, text_humanization, data_processing`
+- **kit.md** (`tools\integrations\kit.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, coding_agent`
+- **klaviyo.md** (`tools\integrations\klaviyo.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui, data_processing`
+- **lemlist.md** (`tools\integrations\lemlist.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, data_processing`
+- **linkedin-ads.md** (`tools\integrations\linkedin-ads.md`) → 🏷️ 推測分類：`marketing_strategy, seo_optimization, text_humanization, data_processing`
+- **livestorm.md** (`tools\integrations\livestorm.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **mailchimp.md** (`tools\integrations\mailchimp.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing`
+- **mention-me.md** (`tools\integrations\mention-me.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, coding_agent`
+- **meta-ads.md** (`tools\integrations\meta-ads.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui`
+- **mixpanel.md** (`tools\integrations\mixpanel.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, project_planning, coding_agent`
+- **onesignal.md** (`tools\integrations\onesignal.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **optimizely.md** (`tools\integrations\optimizely.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, project_planning, coding_agent`
+- **outreach.md** (`tools\integrations\outreach.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing, project_planning`
+- **paddle.md** (`tools\integrations\paddle.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, coding_agent`
+- **partnerstack.md** (`tools\integrations\partnerstack.md`) → 🏷️ 推測分類：`text_humanization`
+- **pendo.md** (`tools\integrations\pendo.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **plausible.md** (`tools\integrations\plausible.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **posthog.md** (`tools\integrations\posthog.md`) → 🏷️ 推測分類：`content_creation, text_humanization, project_planning, coding_agent`
+- **postmark.md** (`tools\integrations\postmark.md`) → 🏷️ 推測分類：`content_creation, text_humanization`
+- **resend.md** (`tools\integrations\resend.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **rewardful.md** (`tools\integrations\rewardful.md`) → 🏷️ 推測分類：`seo_optimization, text_humanization, coding_agent`
+- **salesforce.md** (`tools\integrations\salesforce.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing`
+- **savvycal.md** (`tools\integrations\savvycal.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **segment.md** (`tools\integrations\segment.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing`
+- **semrush.md** (`tools\integrations\semrush.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, data_processing, project_planning`
+- **sendgrid.md** (`tools\integrations\sendgrid.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, data_processing`
+- **shopify.md** (`tools\integrations\shopify.md`) → 🏷️ 推測分類：`text_humanization, data_processing`
+- **similarweb.md** (`tools\integrations\similarweb.md`) → 🏷️ 推測分類：`research_analysis, seo_optimization, text_humanization, data_processing`
+- **snov.md** (`tools\integrations\snov.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, presentation_ui`
+- **stripe.md** (`tools\integrations\stripe.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, coding_agent`
+- **supermetrics.md** (`tools\integrations\supermetrics.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, data_processing`
+- **tiktok-ads.md** (`tools\integrations\tiktok-ads.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization`
+- **tolt.md** (`tools\integrations\tolt.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **trustpilot.md** (`tools\integrations\trustpilot.md`) → 🏷️ 推測分類：`seo_optimization, text_humanization`
+- **typeform.md** (`tools\integrations\typeform.md`) → 🏷️ 推測分類：`content_creation, text_humanization, coding_agent`
+- **webflow.md** (`tools\integrations\webflow.md`) → 🏷️ 推測分類：`marketing_strategy, text_humanization, presentation_ui`
+- **wistia.md** (`tools\integrations\wistia.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, text_humanization, presentation_ui, data_processing, project_planning`
+- **wordpress.md** (`tools\integrations\wordpress.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing`
+- **zapier.md** (`tools\integrations\zapier.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, project_planning, coding_agent`
+- **zoominfo.md** (`tools\integrations\zoominfo.md`) → 🏷️ 推測分類：`marketing_strategy, content_creation, seo_optimization, text_humanization, data_processing`
+
+---
+
+## 📦 Repository: toonify-mcp
+*共發現 11 個潛在技能檔案*
+
+- **README.de.md** (`README.de.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **README.es.md** (`README.es.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **README.fr.md** (`README.fr.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **README.id.md** (`README.id.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **README.ja.md** (`README.ja.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, project_planning, coding_agent`
+- **README.ko.md** (`README.ko.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, project_planning, coding_agent`
+- **README.pt.md** (`README.pt.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **README.ru.md** (`README.ru.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **README.vi.md** (`README.vi.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **README.zh-TW.md** (`README.zh-TW.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **CACHE.md** (`docs\CACHE.md`) → 🏷️ 推測分類：`content_creation, text_humanization, data_processing, coding_agent`
+
+---
+
+## 📦 Repository: vizro
+*共發現 113 個潛在技能檔案*
+
+- **AGENTS.md** (`AGENTS.md`) → 🏷️ 推測分類：`uncategorized`
+- **CLAUDE.md** (`CLAUDE.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **CODE_OF_CONDUCT.md** (`CODE_OF_CONDUCT.md`) → 🏷️ 推測分類：`text_humanization, project_planning, coding_agent`
+- **SECURITY.md** (`SECURITY.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **pull_request_template.md** (`.github\pull_request_template.md`) → 🏷️ 推測分類：`data_processing, coding_agent`
+- **20260126_180956_maximilian_schulz_0_4_0.md** (`vizro-ai\changelog.d\20260126_180956_maximilian_schulz_0_4_0.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260126_192939_runner.md** (`vizro-ai\changelog.d\20260126_192939_runner.md`) → 🏷️ 推測分類：`uncategorized`
+- **index.md** (`vizro-ai\docs\index.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, project_planning, coding_agent`
+- **vizro-ai.md** (`vizro-ai\docs\pages\API-reference\vizro-ai.md`) → 🏷️ 推測分類：`text_humanization`
+- **disclaimer.md** (`vizro-ai\docs\pages\explanation\disclaimer.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, coding_agent`
+- **faq.md** (`vizro-ai\docs\pages\explanation\faq.md`) → 🏷️ 推測分類：`content_creation, text_humanization, project_planning, coding_agent`
+- **safeguard.md** (`vizro-ai\docs\pages\explanation\safeguard.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **safety-in-vizro-ai.md** (`vizro-ai\docs\pages\explanation\safety-in-vizro-ai.md`) → 🏷️ 推測分類：`research_analysis, content_creation, seo_optimization, text_humanization, presentation_ui, data_processing`
+- **quickstart.md** (`vizro-ai\docs\pages\tutorials\quickstart.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **add-generated-chart-usecase.md** (`vizro-ai\docs\pages\user-guides\add-generated-chart-usecase.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, project_planning, coding_agent`
+- **advanced-options.md** (`vizro-ai\docs\pages\user-guides\advanced-options.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **customize-vizro-ai.md** (`vizro-ai\docs\pages\user-guides\customize-vizro-ai.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **install.md** (`vizro-ai\docs\pages\user-guides\install.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning`
+- **AGENTS.md** (`vizro-core\AGENTS.md`) → 🏷️ 推測分類：`uncategorized`
+- **CLAUDE.md** (`vizro-core\CLAUDE.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **20260223_145451_nadija_ratkusic_graca_horizontal_navigation.md** (`vizro-core\changelog.d\20260223_145451_nadija_ratkusic_graca_horizontal_navigation.md`) → 🏷️ 推測分類：`presentation_ui`
+- **20260224_125337_lingyi_zhang_biome_vizro_core.md** (`vizro-core\changelog.d\20260224_125337_lingyi_zhang_biome_vizro_core.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260224_161730_runner.md** (`vizro-core\changelog.d\20260224_161730_runner.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260224_162652_petar_pejovic_0_1_52.md** (`vizro-core\changelog.d\20260224_162652_petar_pejovic_0_1_52.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260225_152339_90609403+huong-li-nguyen_style_dmc_globally.md** (`vizro-core\changelog.d\20260225_152339_90609403+huong-li-nguyen_style_dmc_globally.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260303_151413_90609403+huong-li-nguyen_pre_commit_ci_update_config.md** (`vizro-core\changelog.d\20260303_151413_90609403+huong-li-nguyen_pre_commit_ci_update_config.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260305_194315_nadija_ratkusic_graca_update_horizontal_nav_validation.md** (`vizro-core\changelog.d\20260305_194315_nadija_ratkusic_graca_update_horizontal_nav_validation.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260309_135106_90609403+huong-li-nguyen_update_pos_neg_color.md** (`vizro-core\changelog.d\20260309_135106_90609403+huong-li-nguyen_update_pos_neg_color.md`) → 🏷️ 推測分類：`uncategorized`
+- **index.md** (`vizro-core\docs\index.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **actions.md** (`vizro-core\docs\pages\API-reference\actions.md`) → 🏷️ 推測分類：`uncategorized`
+- **deprecations.md** (`vizro-core\docs\pages\API-reference\deprecations.md`) → 🏷️ 推測分類：`presentation_ui`
+- **figure-callables.md** (`vizro-core\docs\pages\API-reference\figure-callables.md`) → 🏷️ 推測分類：`uncategorized`
+- **kedro-integration.md** (`vizro-core\docs\pages\API-reference\kedro-integration.md`) → 🏷️ 推測分類：`uncategorized`
+- **models.md** (`vizro-core\docs\pages\API-reference\models.md`) → 🏷️ 推測分類：`content_creation, presentation_ui`
+- **table-callables.md** (`vizro-core\docs\pages\API-reference\table-callables.md`) → 🏷️ 推測分類：`uncategorized`
+- **themes.md** (`vizro-core\docs\pages\API-reference\themes.md`) → 🏷️ 推測分類：`uncategorized`
+- **vizro.md** (`vizro-core\docs\pages\API-reference\vizro.md`) → 🏷️ 推測分類：`presentation_ui`
+- **actions-explanation.md** (`vizro-core\docs\pages\explanation\actions-explanation.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **authors.md** (`vizro-core\docs\pages\explanation\authors.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **documentation-style-guide.md** (`vizro-core\docs\pages\explanation\documentation-style-guide.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **faq.md** (`vizro-core\docs\pages\explanation\faq.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **schema.md** (`vizro-core\docs\pages\explanation\schema.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **your-examples.md** (`vizro-core\docs\pages\explanation\your-examples.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, project_planning`
+- **custom-actions-tutorial.md** (`vizro-core\docs\pages\tutorials\custom-actions-tutorial.md`) → 🏷️ 推測分類：`presentation_ui`
+- **explore-components.md** (`vizro-core\docs\pages\tutorials\explore-components.md`) → 🏷️ 推測分類：`presentation_ui`
+- **quickstart-tutorial.md** (`vizro-core\docs\pages\tutorials\quickstart-tutorial.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **actions.md** (`vizro-core\docs\pages\user-guides\actions.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **assets.md** (`vizro-core\docs\pages\user-guides\assets.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **button.md** (`vizro-core\docs\pages\user-guides\button.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **card.md** (`vizro-core\docs\pages\user-guides\card.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **components.md** (`vizro-core\docs\pages\user-guides\components.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **container.md** (`vizro-core\docs\pages\user-guides\container.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui`
+- **controls.md** (`vizro-core\docs\pages\user-guides\controls.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **custom-actions.md** (`vizro-core\docs\pages\user-guides\custom-actions.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **custom-charts.md** (`vizro-core\docs\pages\user-guides\custom-charts.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui`
+- **custom-components.md** (`vizro-core\docs\pages\user-guides\custom-components.md`) → 🏷️ 推測分類：`presentation_ui`
+- **custom-css.md** (`vizro-core\docs\pages\user-guides\custom-css.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **custom-figures.md** (`vizro-core\docs\pages\user-guides\custom-figures.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **custom-tables.md** (`vizro-core\docs\pages\user-guides\custom-tables.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **dashboard.md** (`vizro-core\docs\pages\user-guides\dashboard.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **data-actions.md** (`vizro-core\docs\pages\user-guides\data-actions.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **data.md** (`vizro-core\docs\pages\user-guides\data.md`) → 🏷️ 推測分類：`text_humanization, data_processing`
+- **extensions.md** (`vizro-core\docs\pages\user-guides\extensions.md`) → 🏷️ 推測分類：`text_humanization, coding_agent`
+- **figure.md** (`vizro-core\docs\pages\user-guides\figure.md`) → 🏷️ 推測分類：`presentation_ui`
+- **filters.md** (`vizro-core\docs\pages\user-guides\filters.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **graph-table-actions.md** (`vizro-core\docs\pages\user-guides\graph-table-actions.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **graph.md** (`vizro-core\docs\pages\user-guides\graph.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **install.md** (`vizro-core\docs\pages\user-guides\install.md`) → 🏷️ 推測分類：`presentation_ui, data_processing`
+- **kedro-data-catalog.md** (`vizro-core\docs\pages\user-guides\kedro-data-catalog.md`) → 🏷️ 推測分類：`text_humanization, data_processing, project_planning, coding_agent`
+- **layouts.md** (`vizro-core\docs\pages\user-guides\layouts.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **navigation.md** (`vizro-core\docs\pages\user-guides\navigation.md`) → 🏷️ 推測分類：`presentation_ui`
+- **notification-actions.md** (`vizro-core\docs\pages\user-guides\notification-actions.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **pages.md** (`vizro-core\docs\pages\user-guides\pages.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **parameters.md** (`vizro-core\docs\pages\user-guides\parameters.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **run-deploy.md** (`vizro-core\docs\pages\user-guides\run-deploy.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning, coding_agent`
+- **selectors.md** (`vizro-core\docs\pages\user-guides\selectors.md`) → 🏷️ 推測分類：`presentation_ui`
+- **table.md** (`vizro-core\docs\pages\user-guides\table.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **tabs.md** (`vizro-core\docs\pages\user-guides\tabs.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui`
+- **text.md** (`vizro-core\docs\pages\user-guides\text.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **themes.md** (`vizro-core\docs\pages\user-guides\themes.md`) → 🏷️ 推測分類：`presentation_ui`
+- **visual-formatting.md** (`vizro-core\docs\pages\user-guides\visual-formatting.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **AGENTS.md** (`vizro-dash-components\AGENTS.md`) → 🏷️ 推測分類：`uncategorized`
+- **CLAUDE.md** (`vizro-dash-components\CLAUDE.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, project_planning`
+- **20260306_092734_lingyi_zhang_0_1_0.md** (`vizro-dash-components\changelog.d\20260306_092734_lingyi_zhang_0_1_0.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260306_150240_runner.md** (`vizro-dash-components\changelog.d\20260306_150240_runner.md`) → 🏷️ 推測分類：`uncategorized`
+- **SKILL.md** (`vizro-e2e-flow\skills\dashboard-build\SKILL.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **custom_charts_guide.md** (`vizro-e2e-flow\skills\dashboard-build\references\custom_charts_guide.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **data_management.md** (`vizro-e2e-flow\skills\dashboard-build\references\data_management.md`) → 🏷️ 推測分類：`content_creation, presentation_ui, data_processing, project_planning`
+- **SKILL.md** (`vizro-e2e-flow\skills\dashboard-design\SKILL.md`) → 🏷️ 推測分類：`presentation_ui, project_planning, coding_agent`
+- **chart_selection.md** (`vizro-e2e-flow\skills\dashboard-design\references\chart_selection.md`) → 🏷️ 推測分類：`research_analysis, marketing_strategy, content_creation, presentation_ui`
+- **common_mistakes.md** (`vizro-e2e-flow\skills\dashboard-design\references\common_mistakes.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing, project_planning`
+- **information_architecture.md** (`vizro-e2e-flow\skills\dashboard-design\references\information_architecture.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui, data_processing`
+- **layout_patterns.md** (`vizro-e2e-flow\skills\dashboard-design\references\layout_patterns.md`) → 🏷️ 推測分類：`content_creation, text_humanization, presentation_ui`
+- **20260204_082559_runner.md** (`vizro-mcp\changelog.d\20260204_082559_runner.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260204_090843_maximilian_schulz_0_1_4.md** (`vizro-mcp\changelog.d\20260204_090843_maximilian_schulz_0_1_4.md`) → 🏷️ 推測分類：`uncategorized`
+- **20260303_140823_90609403+huong-li-nguyen_pre_commit_ci_update_config.md** (`vizro-mcp\changelog.d\20260303_140823_90609403+huong-li-nguyen_pre_commit_ci_update_config.md`) → 🏷️ 推測分類：`uncategorized`
+- **index.md** (`vizro-mcp\docs\index.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+- **API-reference.md** (`vizro-mcp\docs\pages\API-reference\API-reference.md`) → 🏷️ 推測分類：`research_analysis, content_creation, text_humanization, data_processing`
+- **contribute.md** (`vizro-mcp\docs\pages\explanation\contribute.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **disclaimers.md** (`vizro-mcp\docs\pages\explanation\disclaimers.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **faqs.md** (`vizro-mcp\docs\pages\explanation\faqs.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **create-charts-only.md** (`vizro-mcp\docs\pages\guides\create-charts-only.md`) → 🏷️ 推測分類：`data_processing, coding_agent`
+- **get-live-preview.md** (`vizro-mcp\docs\pages\guides\get-live-preview.md`) → 🏷️ 推測分類：`data_processing`
+- **set-up-vizro-mcp-basics.md** (`vizro-mcp\docs\pages\guides\set-up-vizro-mcp-basics.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **set-up-vizro-mcp-with-claude.md** (`vizro-mcp\docs\pages\guides\set-up-vizro-mcp-with-claude.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **set-up-vizro-mcp-with-cursor.md** (`vizro-mcp\docs\pages\guides\set-up-vizro-mcp-with-cursor.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui`
+- **set-up-vizro-mcp-with-vscode.md** (`vizro-mcp\docs\pages\guides\set-up-vizro-mcp-with-vscode.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, coding_agent`
+- **use-data.md** (`vizro-mcp\docs\pages\guides\use-data.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, project_planning, coding_agent`
+- **use-prompt-templates.md** (`vizro-mcp\docs\pages\guides\use-prompt-templates.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing`
+- **claude-desktop-tutorial.md** (`vizro-mcp\docs\pages\tutorials\claude-desktop-tutorial.md`) → 🏷️ 推測分類：`presentation_ui, data_processing, coding_agent`
+- **cursor-tutorial.md** (`vizro-mcp\docs\pages\tutorials\cursor-tutorial.md`) → 🏷️ 推測分類：`text_humanization, data_processing, coding_agent`
+- **first-dashboard-tutorial.md** (`vizro-mcp\docs\pages\tutorials\first-dashboard-tutorial.md`) → 🏷️ 推測分類：`presentation_ui, coding_agent`
+- **vs-code-tutorial.md** (`vizro-mcp\docs\pages\tutorials\vs-code-tutorial.md`) → 🏷️ 推測分類：`text_humanization, presentation_ui, data_processing, coding_agent`
+
+---

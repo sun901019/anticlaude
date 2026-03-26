@@ -1,0 +1,56 @@
+# 環境變數（絕對不能 commit）
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# Next.js
+dashboard/.next/
+dashboard/node_modules/
+dashboard/.env.local
+
+# 系統
+.DS_Store
+Thumbs.db
+
+# 日誌
+logs/
+*.log
+
+# 資料庫（含個人資料，不上傳）
+data/
+*.db
+*.sqlite3
+
+# 生成的內容輸出（含草稿、報告）
+outputs/
+
+# AI 狀態與記憶（本機工作狀態）
+ai/state/
+ai/handoff/
+
+# 個人資料與私人內容
+_context/about_me.md
+_context/ecommerce_v2.md
+.agents/
+uploads/
+
+# 個人業務資料
+*.xlsx
+*.xls
+
+# 原始 feed 快取
+raw_feed_*.json
+
+# 第三方 clone 的 skills library（不是自己的程式碼）
+_hub/skills_library/

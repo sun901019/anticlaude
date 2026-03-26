@@ -1,0 +1,209 @@
+# Workspace Hub 整合計畫
+
+> **狀態**：草稿 — 等待審核  
+> **Hub 位置**：`c:\Users\sun90\Anticlaude\_hub\shared\`
+
+---
+
+## 資源總覽 — 我有什麼、能幹嘛、什麼時候用
+
+### 🤖 Agents（AI 角色專家）
+
+| # | Agent 名稱 | 這是什麼 | 能幫你什麼 | 何時使用 | 用在哪 |
+|---|-----------|---------|-----------|---------|-------|
+| A1 | **Content Strategist** | 你的內容策略師（自建） | 根據受眾數據選主題、定發文節奏 | 每日分析 + 週報時 | AntiClaude |
+| A2 | **Threads Writer** | 繁中文案專家（自建） | 用你的語氣寫 Hook + 貼文 | 每日文案生成時 | AntiClaude |
+| A3 | **Frontend Developer** | 前端開發（agency-agents） | 建 UI、寫 React 元件、調 CSS | 改儀表板時 | AntiClaude Dashboard |
+| A4 | **Growth Hacker** | 成長駭客（agency-agents） | 分析增長數據、A/B 測試建議 | 週報分析、優化策略時 | AntiClaude |
+| A5 | **Social Media Strategist** | 社群策略師（agency-agents） | 多平台發文策略、最佳時段分析 | 拓展到 IG/X 時 | 所有專案 |
+| A6 | **Backend Architect** | 後端架構師（agency-agents） | API 設計、DB 優化、系統架構 | 擴充功能時 | 所有專案 |
+| A7 | **UI Designer** | UI 設計師（agency-agents） | 設計介面、配色、動畫 | 儀表板改版時 | AntiClaude Dashboard |
+| A8 | **DevOps Automator** | 部署自動化（agency-agents） | CI/CD、Docker、監控 | 部署到 production 時 | 所有專案 |
+
+### 🧩 Skills（可安裝的能力）
+
+| # | Skill 名稱 | 這是什麼 | 能幫你什麼 | 何時使用 | 用在哪 |
+|---|-----------|---------|-----------|---------|-------|
+| S1 | **Frontend Slides** | 用程式碼做簡報（frontend-slides） | 不用 PowerPoint 就能做漂亮的 web 簡報 | 要做簡報、pitch deck 時 | 所有專案 |
+| S2 | **SKILLS All-in-one** | AI 技能庫集合（huangchiyu） | 一站式瀏覽安裝各種 Claude Code skill | 想找新 skill 時 | 全域 |
+| S3 | **Content Pipeline Skill** | 自建：內容產出流程（自建） | 一鍵跑完抓取→分析→文案的流程 | 每天使用 | AntiClaude |
+
+### 🔧 MCP Tools（模型連接協議工具）
+
+| # | Tool 名稱 | 這是什麼 | 能幫你什麼 | 何時使用 | 用在哪 |
+|---|----------|---------|-----------|---------|-------|
+| T1 | **Toonify MCP** | Token 壓縮器（toonify-mcp） | Claude API 省 50-60% token 費用 | 所有 Claude 呼叫時 | 全域，特別是 AntiClaude |
+| T2 | **Threads API Tool** | 自建：Threads 數據工具 | 抓貼文數據、計算互動率 | 每日追蹤時 | AntiClaude |
+
+---
+
+## 🗺️ Hub 資料夾結構
+
+```
+Anticlaude/
+├── _hub/                               ← 🆕 資源管理中心
+│   ├── shared/
+│   │   ├── agents/                     ← 共用 AI 角色
+│   │   │   ├── README.md
+│   │   │   ├── content-strategist.md   ← A1 自建
+│   │   │   ├── threads-writer.md       ← A2 自建
+│   │   │   └── agency-agents/          ← A3-A8 引用
+│   │   │       ├── README.md
+│   │   │       └── (git clone 或 symlink)
+│   │   │
+│   │   ├── skills/                     ← 共用技能
+│   │   │   ├── README.md
+│   │   │   ├── frontend-slides/        ← S1
+│   │   │   │   └── README.md
+│   │   │   └── skills-catalog.md       ← S2 索引
+│   │   │
+│   │   └── tools/                      ← 共用 MCP 工具
+│   │       ├── README.md
+│   │       └── toonify-mcp/            ← T1
+│   │           └── README.md
+│   │
+│   ├── START_HERE.md                   ← 🆕 新手入口
+│   └── RESOURCE_MAP.md                 ← 🆕 本文件（你正在看的）
+│
+├── _context/                           ← （現有，不動）
+├── src/                                ← （現有，不動）
+├── dashboard/                          ← （現有，不動）
+└── ...
+```
+
+---
+
+## 🔄 推薦工作流 — 誰負責什麼
+
+```
+┌─────────────────────────────────────────────────────────┐
+│              🧠 Antigravity（你正在用的）                 │
+│                                                         │
+│  角色：總指揮 + 規劃師                                    │
+│  負責：                                                  │
+│    • 理解你的需求，拆解成具體任務                          │
+│    • 設計系統架構、API 規格                                │
+│    • 寫 implementation_plan.md                           │
+│    • 協調誰做什麼（dispatch to Claude Code）              │
+│    • 審核成果、決策修改方向                                │
+│                                                         │
+│  什麼時候叫它：                                           │
+│    → 要規劃新功能時                                       │
+│    → 要做架構決策時                                       │
+│    → 要整合多個系統時                                     │
+│    → 要寫文件、做分析時                                   │
+└────────────────────────┬────────────────────────────────┘
+                         │ 產出計畫 + 任務
+                         ▼
+┌─────────────────────────────────────────────────────────┐
+│              ⚡ Claude Code（執行引擎）                    │
+│                                                         │
+│  角色：程式碼執行者 + 實作專家                              │
+│  負責：                                                  │
+│    • 寫程式碼（Python / TypeScript / CSS）                │
+│    • 跑測試、修 bug                                      │
+│    • 操作終端機（pip install、npm run dev）               │
+│    • 依據 agent 角色切換行為模式                           │
+│    • 使用 MCP tools 和 skills                            │
+│                                                         │
+│  什麼時候叫它：                                           │
+│    → 要寫/改程式碼時                                      │
+│    → 要跑 pipeline 時                                    │
+│    → 要 debug 時                                        │
+│    → 要安裝套件時                                        │
+└────────────────────────┬────────────────────────────────┘
+                         │ 使用
+                         ▼
+┌─────────────────────────────────────────────────────────┐
+│          📦 共享資源（_hub/shared/）                       │
+│                                                         │
+│  agents/ → 提供角色人設，讓 Claude Code 變身專家           │
+│  skills/ → 提供可安裝的能力包                              │
+│  tools/  → 提供 MCP 工具擴充功能                          │
+│                                                         │
+│  什麼時候用：                                             │
+│    → 需要專業角色時 → 載入對應 agent .md                   │
+│    → 需要做簡報時 → 啟用 frontend-slides skill            │
+│    → 想省 API 費用 → 啟用 toonify-mcp                    │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 日常場景對照
+
+| 你想做什麼 | 叫誰 | 用什麼資源 |
+|-----------|------|----------|
+| 「規劃一個新功能」 | Antigravity | — |
+| 「幫我寫 scraper」 | Claude Code | agent: Backend Architect |
+| 「改儀表板 UI」 | Claude Code | agent: Frontend Developer + UI Designer |
+| 「跑今天的 pipeline」 | Claude Code | skill: Content Pipeline |
+| 「分析這週 Threads 數據」 | Antigravity | tool: Threads API |
+| 「做一個投影片分享 AI 趨勢」 | Claude Code | skill: Frontend Slides |
+| 「部署到 production」 | Claude Code | agent: DevOps Automator |
+| 「省 Claude 的 API 費用」 | 自動 | tool: Toonify MCP |
+| 「找新的 skill 來用」 | 你自己 | skill: SKILLS All-in-one 網站 |
+
+---
+
+## Claude Code v2.1.71 新功能可用
+
+| 功能 | 說明 | 對你的用處 |
+|------|------|----------|
+| `/loop` 指令 | 定時重複執行指令（如 `/loop 5m check status`） | 可以用來定時跑 pipeline |
+| Cron 排程 | session 內設定定時任務 | 未來可替代手動按鈕 |
+| Plugin marketplace | `/plugin marketplace add repo@ref` | 安裝 toonify-mcp 等工具 |
+
+---
+
+## 執行任務
+
+### Phase 1 — 建立 Hub 結構
+
+#### Task H1 — 建立 _hub 資料夾
+- **檔案**：
+  - `[NEW] _hub/START_HERE.md` — 新手入口
+  - `[NEW] _hub/shared/agents/README.md`
+  - `[NEW] _hub/shared/skills/README.md`
+  - `[NEW] _hub/shared/tools/README.md`
+- **驗收**：
+  - [ ] 三層資料夾結構建好
+  - [ ] 每層有 README.md
+
+#### Task H2 — 自建 Agents
+- **檔案**：
+  - `[NEW] _hub/shared/agents/content-strategist.md` — 內容策略師角色設定
+  - `[NEW] _hub/shared/agents/threads-writer.md` — 繁中文案專家角色設定
+- **驗收**：
+  - [ ] 每個 agent 有：角色、性格、能力、限制、Prompt 模板
+
+#### Task H3 — 引用 agency-agents
+- **檔案**：
+  - `[NEW] _hub/shared/agents/agency-agents/README.md` — 使用說明 + 精選 agent 索引
+- **驗收**：
+  - [ ] README 列出推薦使用的 8 個 agent
+  - [ ] 說明如何 clone 或直接引用 GitHub
+
+### Phase 2 — 安裝 Skills + Tools
+
+#### Task H4 — Frontend Slides Skill
+- **檔案**：
+  - `[NEW] _hub/shared/skills/frontend-slides/README.md`
+- **驗收**：
+  - [ ] 安裝指令記錄在 README
+  - [ ] 範例用法
+
+#### Task H5 — Toonify MCP 安裝
+- **檔案**：
+  - `[NEW] _hub/shared/tools/toonify-mcp/README.md`
+- **驗收**：
+  - [ ] 安裝指令 + 設定方法
+  - [ ] 預估省多少 token
+
+### Phase 3 — START_HERE 入口文件
+
+#### Task H6 — 寫 START_HERE.md
+- **檔案**：
+  - `[NEW] _hub/START_HERE.md`
+- **驗收**：
+  - [ ] 列出所有可用資源
+  - [ ] 每日使用流程
+  - [ ] 「如何叫 agent / skill / tool」的具體指令

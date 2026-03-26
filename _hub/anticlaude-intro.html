@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AntiClaude × AI-OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07070f;
+      --bg-card: #0f0f1a;
+      --bg-split: #6200ff;
+      --accent-neon: #b87fff;
+      --accent-lime: #c8ff57;
+      --accent-cyan: #57ffe0;
+      --text-light: #ffffff;
+      --text-dim: rgba(255,255,255,0.55);
+      --text-muted: rgba(255,255,255,0.3);
+      --font-display: 'Syne', 'Noto Sans TC', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --font-body: 'Noto Sans TC', sans-serif;
+      --title-size: clamp(2.2rem, 6vw, 5rem);
+      --h2-size: clamp(1.4rem, 3.5vw, 2.8rem);
+      --body-size: clamp(0.78rem, 1.4vw, 1rem);
+      --small-size: clamp(0.65rem, 1vw, 0.82rem);
+      --slide-padding: clamp(1.5rem, 5vw, 5rem);
+      --content-gap: clamp(0.8rem, 2vw, 2rem);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow-x: hidden; }
+    html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+    .slide {
+      width: 100vw; height: 100vh; height: 100dvh;
+      overflow: hidden; scroll-snap-align: start;
+      display: flex; flex-direction: column; position: relative;
+    }
+    .slide-content {
+      flex: 1; display: flex; flex-direction: column; justify-content: center;
+      max-height: 100%; overflow: hidden; padding: var(--slide-padding);
+    }
+    img { max-width: 100%; max-height: min(50vh, 400px); object-fit: contain; }
+    @media (max-height: 700px) {
+      :root { --slide-padding: clamp(0.75rem, 3vw, 2rem); --h2-size: clamp(1.1rem, 3vw, 2rem); }
+    }
+    @media (max-height: 500px) { .nav-dots, .keyboard-hint { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s var(--ease-out-expo), transform 0.65s var(--ease-out-expo); }
+    .slide.visible .reveal { opacity: 1; transform: none; }
+    .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .reveal:nth-child(2) { transition-delay: 0.15s; }
+    .reveal:nth-child(3) { transition-delay: 0.25s; }
+    .reveal:nth-child(4) { transition-delay: 0.35s; }
+    .reveal:nth-child(5) { transition-delay: 0.45s; }
+    .reveal:nth-child(6) { transition-delay: 0.55s; }
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--bg-split), var(--accent-neon));
+      width: 0%; z-index: 9999; transition: width 0.3s ease;
+      box-shadow: 0 0 8px rgba(184,127,255,0.6);
+    }
+    .nav-dots {
+      position: fixed; right: clamp(12px, 2vw, 20px); top: 50%;
+      transform: translateY(-50%); display: flex; flex-direction: column; gap: 8px; z-index: 100;
+    }
+    .nav-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--text-muted);
+      cursor: pointer; transition: all 0.3s ease; border: none;
+    }
+    .nav-dot.active { background: var(--accent-neon); transform: scale(1.4); }
+    .keyboard-hint {
+      position: fixed; bottom: clamp(8px, 1.5vh, 16px); left: 50%;
+      transform: translateX(-50%); font-family: var(--font-mono);
+      font-size: clamp(0.58rem, 0.9vw, 0.72rem); color: var(--text-muted);
+      letter-spacing: 0.08em; z-index: 99; white-space: nowrap;
+      transition: opacity 0.5s ease;
+    }
+    /* === SLIDE 1: TITLE === */
+    .slide-title { display: grid; grid-template-columns: 1fr 1fr; }
+    .title-left {
+      background: var(--bg-split); display: flex; flex-direction: column;
+      justify-content: center; padding: var(--slide-padding); position: relative; overflow: hidden;
+    }
+    .title-left::before {
+      content: ''; position: absolute; top: -30%; right: -20%; width: 80%; height: 80%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); border-radius: 50%;
+    }
+    .title-right {
+      background: var(--bg-dark); display: flex; flex-direction: column;
+      justify-content: center; padding: var(--slide-padding); position: relative; overflow: hidden;
+    }
+    .title-right::after {
+      content: ''; position: absolute; bottom: -20%; left: -10%; width: 60%; height: 60%;
+      background: radial-gradient(circle, rgba(184,127,255,0.15) 0%, transparent 70%); border-radius: 50%;
+    }
+    .ac-logo { font-family: var(--font-mono); font-size: clamp(0.7rem, 1.2vw, 0.9rem); color: rgba(255,255,255,0.5); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: clamp(1rem, 3vh, 2.5rem); }
+    .title-main { font-family: var(--font-display); font-size: clamp(2.8rem, 7vw, 6rem); font-weight: 800; color: #fff; line-height: 0.95; letter-spacing: -0.02em; }
+    .title-sub { font-family: var(--font-mono); font-size: clamp(0.8rem, 1.5vw, 1.1rem); color: var(--accent-lime); margin-top: clamp(1rem, 2.5vh, 2rem); letter-spacing: 0.05em; }
+    .title-desc { font-family: var(--font-body); font-size: var(--body-size); color: var(--text-dim); line-height: 1.7; margin-top: clamp(0.8rem, 2vh, 1.5rem); max-width: 360px; }
+    .title-badge { display: inline-block; font-family: var(--font-mono); font-size: var(--small-size); color: var(--accent-lime); border: 1px solid rgba(200,255,87,0.35); padding: 4px 10px; border-radius: 4px; margin-top: clamp(1rem, 2.5vh, 2rem); letter-spacing: 0.05em; }
+    @media (max-width: 600px) { .slide-title { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; } }
+    /* === SLIDE DARK === */
+    .slide-dark { background: var(--bg-dark); }
+    .slide-num { font-family: var(--font-mono); font-size: clamp(0.65rem, 1vw, 0.8rem); color: var(--text-muted); letter-spacing: 0.15em; margin-bottom: clamp(0.6rem, 1.5vh, 1.2rem); }
+    .slide-h2 { font-family: var(--font-display); font-size: var(--h2-size); font-weight: 800; color: var(--text-light); line-height: 1.1; letter-spacing: -0.01em; }
+    .neon-accent { color: var(--accent-neon); }
+    .lime-accent { color: var(--accent-lime); }
+    .cyan-accent { color: var(--accent-cyan); }
+    .pain-list { list-style: none; display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 1rem); margin-top: clamp(1rem, 2.5vh, 2rem); }
+    .pain-list li { font-family: var(--font-body); font-size: var(--body-size); color: var(--text-dim); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+    .pain-list li::before { content: '—'; color: var(--bg-split); font-family: var(--font-mono); flex-shrink: 0; margin-top: 1px; }
+    /* === SOLUTION SLIDE === */
+    .slide-solution { background: var(--bg-dark); position: relative; overflow: hidden; }
+    .slide-solution::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 85% 15%, rgba(98,0,255,0.25) 0%, transparent 55%), radial-gradient(ellipse at 10% 85%, rgba(87,255,224,0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .flow-steps { display: flex; gap: clamp(0.4rem, 1.2vw, 1rem); margin-top: clamp(1rem, 2.5vh, 2rem); flex-wrap: wrap; align-items: center; }
+    .flow-step { flex: 1; min-width: clamp(70px, 10vw, 120px); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: clamp(0.5rem, 1.2vw, 0.9rem); display: flex; flex-direction: column; gap: 3px; }
+    .flow-step-num { font-family: var(--font-mono); font-size: clamp(0.55rem, 0.9vw, 0.7rem); color: var(--accent-neon); opacity: 0.7; }
+    .flow-step-label { font-family: var(--font-display); font-size: clamp(0.7rem, 1.3vw, 0.92rem); font-weight: 700; color: var(--text-light); line-height: 1.2; }
+    .flow-step-sub { font-family: var(--font-body); font-size: clamp(0.58rem, 0.85vw, 0.7rem); color: var(--text-muted); line-height: 1.4; }
+    .flow-arrow { font-size: clamp(0.7rem, 1.2vw, 0.9rem); color: var(--bg-split); opacity: 0.6; flex-shrink: 0; }
+    /* === FEATURES GRID === */
+    .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(0.6rem, 1.5vw, 1.2rem); margin-top: clamp(1rem, 2.5vh, 2rem); max-height: min(62vh, 440px); }
+    .feature-card { background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: clamp(0.8rem, 1.8vw, 1.4rem); position: relative; overflow: hidden; }
+    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+    .feature-card:nth-child(1)::before { background: var(--bg-split); }
+    .feature-card:nth-child(2)::before { background: var(--accent-cyan); }
+    .feature-card:nth-child(3)::before { background: var(--accent-lime); }
+    .feature-card:nth-child(4)::before { background: var(--accent-neon); }
+    .feature-icon { font-size: clamp(1.2rem, 2.5vw, 1.8rem); margin-bottom: clamp(0.4rem, 1vh, 0.8rem); }
+    .feature-title { font-family: var(--font-display); font-size: clamp(0.85rem, 1.5vw, 1.1rem); font-weight: 700; color: var(--text-light); margin-bottom: clamp(0.3rem, 0.8vh, 0.5rem); }
+    .feature-desc { font-family: var(--font-body); font-size: clamp(0.65rem, 1vw, 0.8rem); color: var(--text-dim); line-height: 1.5; }
+    /* === SKILLS GRID === */
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.5rem, 1.2vw, 1rem); margin-top: clamp(1rem, 2.5vh, 2rem); }
+    .skill-tag { background: rgba(98,0,255,0.12); border: 1px solid rgba(98,0,255,0.25); border-radius: 6px; padding: clamp(0.5rem, 1.2vw, 0.9rem) clamp(0.6rem, 1.2vw, 1rem); }
+    .skill-tag-name { font-family: var(--font-mono); font-size: clamp(0.58rem, 0.95vw, 0.75rem); color: var(--accent-neon); letter-spacing: 0.03em; }
+    .skill-tag-desc { font-family: var(--font-body); font-size: clamp(0.58rem, 0.85vw, 0.7rem); color: var(--text-dim); margin-top: 2px; line-height: 1.4; }
+    /* === DASHBOARD === */
+    .dash-preview { margin-top: clamp(1rem, 2vh, 1.8rem); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.5rem, 1.2vw, 0.9rem); }
+    .dash-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: clamp(0.7rem, 1.5vw, 1.1rem); text-align: center; }
+    .dash-card-label { font-family: var(--font-body); font-size: clamp(0.6rem, 0.9vw, 0.72rem); color: var(--text-muted); margin-bottom: 4px; }
+    .dash-card-title { font-family: var(--font-display); font-size: clamp(0.78rem, 1.3vw, 1rem); font-weight: 700; color: var(--text-light); line-height: 1.4; }
+    /* === LOOP === */
+    .loop-ring { position: absolute; right: clamp(2rem, 5vw, 6rem); top: 50%; transform: translateY(-50%); width: clamp(160px, 22vw, 280px); height: clamp(160px, 22vw, 280px); opacity: 0.18; }
+    .loop-ring circle { fill: none; stroke: var(--accent-neon); stroke-width: 1; animation: spin 18s linear infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .stat-row { display: flex; gap: clamp(0.8rem, 2vw, 1.8rem); margin-top: clamp(1rem, 2.5vh, 2rem); flex-wrap: wrap; }
+    .stat-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: clamp(0.6rem, 1.5vw, 1.1rem) clamp(0.8rem, 2vw, 1.5rem); }
+    .stat-num { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 800; color: var(--accent-neon); letter-spacing: -0.02em; line-height: 1; }
+    .stat-label { font-family: var(--font-body); font-size: var(--small-size); color: var(--text-muted); margin-top: 2px; }
+    /* === NEXT === */
+    .slide-next { background: var(--bg-split); position: relative; overflow: hidden; }
+    .slide-next::before { content: ''; position: absolute; top: -40%; right: -20%; width: 90%; height: 90%; background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%); border-radius: 50%; }
+    .slide-next::after { content: 'AC'; position: absolute; bottom: -5vh; right: 3vw; font-family: var(--font-mono); font-size: clamp(8rem, 20vw, 18rem); font-weight: 700; color: rgba(255,255,255,0.04); letter-spacing: -0.05em; pointer-events: none; user-select: none; }
+    .next-tags { display: flex; gap: clamp(0.5rem, 1.2vw, 0.9rem); flex-wrap: wrap; margin-top: clamp(1rem, 2.5vh, 2rem); }
+    .next-tag { font-family: var(--font-mono); font-size: var(--small-size); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.25); padding: 5px 12px; border-radius: 4px; letter-spacing: 0.04em; }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <nav class="nav-dots" id="navDots"></nav>
+  <p class="keyboard-hint" id="keyHint">↑↓ 或 Space 切換頁面</p>
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide slide-title" id="slide-0">
+    <div class="title-left">
+      <p class="ac-logo reveal">AntiClaude × AI-OS</p>
+      <h1 class="title-main reveal">Anti<br>Claude</h1>
+      <p class="title-sub reveal">個人品牌內容自動化系統</p>
+    </div>
+    <div class="title-right">
+      <p class="title-desc reveal">一套讓 AI 幫你自動抓取新聞、分析趨勢、評分選題、寫出台灣味文案的內容系統。</p>
+      <p class="title-desc reveal" style="margin-top:0.5rem;">帳號：<span style="color:var(--accent-neon)">@sunlee._.yabg</span></p>
+      <span class="title-badge reveal">v2.0 · AI-OS 中台架構</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: PROBLEM -->
+  <section class="slide slide-dark" id="slide-1">
+    <div class="slide-content">
+      <p class="slide-num reveal">01 — 問題</p>
+      <h2 class="slide-h2 reveal">做個人品牌<br><span class="neon-accent">超累的</span></h2>
+      <ul class="pain-list">
+        <li class="reveal">每天要自己找 AI 新聞，還要判斷值不值得發</li>
+        <li class="reveal">寫出來的文案要嘛太乾、要嘛太 AI</li>
+        <li class="reveal">不知道哪個主題受眾最喜歡，憑感覺猜</li>
+        <li class="reveal">發文後沒有數據回饋，不知道該繼續還是調整</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: SOLUTION -->
+  <section class="slide slide-solution" id="slide-2">
+    <div class="slide-content" style="position:relative;z-index:1;">
+      <p class="slide-num reveal">02 — 解方</p>
+      <h2 class="slide-h2 reveal">讓系統幫你<br><span class="lime-accent">跑完整個流程</span></h2>
+      <div class="flow-steps reveal">
+        <div class="flow-step">
+          <span class="flow-step-num">01</span>
+          <span class="flow-step-label">抓取</span>
+          <span class="flow-step-sub">自動爬 AI 新聞 + 時事</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <span class="flow-step-num">02</span>
+          <span class="flow-step-label">分析</span>
+          <span class="flow-step-sub">Gemini 聚類主題</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <span class="flow-step-num">03</span>
+          <span class="flow-step-label">評分</span>
+          <span class="flow-step-sub">Claude 受眾匹配評分</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <span class="flow-step-num">04</span>
+          <span class="flow-step-label">選題</span>
+          <span class="flow-step-sub">GPT 策略 Top 3</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <span class="flow-step-num">05</span>
+          <span class="flow-step-label">寫稿</span>
+          <span class="flow-step-sub">雙版本 Threads 文案</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <span class="flow-step-num">06</span>
+          <span class="flow-step-label">回饋</span>
+          <span class="flow-step-sub">數據閉環學習</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: FEATURES -->
+  <section class="slide slide-dark" id="slide-3">
+    <div class="slide-content">
+      <p class="slide-num reveal">03 — 四大模組</p>
+      <h2 class="slide-h2 reveal">系統核心能力</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-title">多源抓取</div>
+          <div class="feature-desc">RSS + HackerNews + Serper + Perplexity<br>每天自動執行，去重 + 存 DB</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🤖</div>
+          <div class="feature-title">AI 三重分析</div>
+          <div class="feature-desc">Gemini 聚類 → Claude 評分 → GPT 策略<br>各司其職，互補不重疊</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">數據儀表板</div>
+          <div class="feature-desc">Next.js Dashboard<br>互動率、精選清單、原始素材一覽</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔄</div>
+          <div class="feature-title">閉環回饋</div>
+          <div class="feature-desc">Threads 互動數據 → audience_insights<br>→ 下次評分更準</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: AI-OS SKILLS -->
+  <section class="slide slide-dark" id="slide-4">
+    <div class="slide-content">
+      <p class="slide-num reveal">04 — AI-OS 中台</p>
+      <h2 class="slide-h2 reveal">9 個 <span class="neon-accent">Composite Skills</span></h2>
+      <div class="skills-grid">
+        <div class="skill-tag reveal"><div class="skill-tag-name">text_humanization</div><div class="skill-tag-desc">去除 AI 味，更像人說話</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">content_creation</div><div class="skill-tag-desc">Threads 貼文結構設計</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">research_analysis</div><div class="skill-tag-desc">素材篩選與趨勢分析</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">marketing_strategy</div><div class="skill-tag-desc">選題策略與發文計畫</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">seo_optimization</div><div class="skill-tag-desc">GEO + 傳統 SEO</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">presentation_ui</div><div class="skill-tag-desc">HTML 投影片製作</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">data_processing</div><div class="skill-tag-desc">Vizro 互動式儀表板</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">project_planning</div><div class="skill-tag-desc">任務拆解與計畫生成</div></div>
+        <div class="skill-tag reveal"><div class="skill-tag-name">coding_agent</div><div class="skill-tag-desc">程式碼生成與系統實作</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: DASHBOARD -->
+  <section class="slide slide-dark" id="slide-5">
+    <div class="slide-content">
+      <p class="slide-num reveal">05 — 儀表板</p>
+      <h2 class="slide-h2 reveal"><span class="cyan-accent">6 個頁面</span>，全部打通</h2>
+      <div class="dash-preview">
+        <div class="dash-card reveal"><div class="dash-card-label">今日焦點</div><div class="dash-card-title">Top 3 主題<br>雙版本文案</div></div>
+        <div class="dash-card reveal"><div class="dash-card-label">精選清單</div><div class="dash-card-title">評分主題 +<br>原始素材</div></div>
+        <div class="dash-card reveal"><div class="dash-card-label">素材庫</div><div class="dash-card-title">每日新聞<br>來源追蹤</div></div>
+        <div class="dash-card reveal"><div class="dash-card-label">指標追蹤</div><div class="dash-card-title">Threads 互動<br>趨勢圖表</div></div>
+        <div class="dash-card reveal"><div class="dash-card-label">受眾洞察</div><div class="dash-card-title">最佳時段<br>主題偏好</div></div>
+        <div class="dash-card reveal"><div class="dash-card-label">週報</div><div class="dash-card-title">每週表現<br>自動整理</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: CLOSED LOOP -->
+  <section class="slide slide-dark" id="slide-6" style="overflow:hidden;">
+    <svg class="loop-ring" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" stroke-dasharray="12 8"/>
+      <circle cx="100" cy="100" r="65" stroke-dasharray="6 14" style="animation-direction:reverse;animation-duration:12s"/>
+      <circle cx="100" cy="100" r="40" stroke-dasharray="20 6" style="animation-duration:8s"/>
+    </svg>
+    <div class="slide-content" style="position:relative;z-index:1;">
+      <p class="slide-num reveal">06 — 閉環系統</p>
+      <h2 class="slide-h2 reveal">越用<span class="neon-accent">越準</span>，<br>越來越懂受眾</h2>
+      <div class="stat-row">
+        <div class="stat-box reveal"><div class="stat-num">9</div><div class="stat-label">外部 Skill 庫整合</div></div>
+        <div class="stat-box reveal"><div class="stat-num">7</div><div class="stat-label">AI Agents</div></div>
+        <div class="stat-box reveal"><div class="stat-num">3</div><div class="stat-label">AI 模型協作</div></div>
+        <div class="stat-box reveal"><div class="stat-num">∞</div><div class="stat-label">自動學習循環</div></div>
+      </div>
+      <p class="reveal" style="font-family:var(--font-body);font-size:var(--body-size);color:var(--text-dim);line-height:1.7;max-width:520px;margin-top:clamp(0.8rem,2vh,1.5rem);">每次執行 → Threads 數據回存 DB → Claude 評分注入歷史數據 → 下次選題更貼近真實受眾喜好</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: NEXT -->
+  <section class="slide slide-next" id="slide-7">
+    <div class="slide-content" style="position:relative;z-index:1;">
+      <p class="ac-logo reveal" style="color:rgba(255,255,255,0.5);">What's Next</p>
+      <h2 class="reveal" style="font-family:var(--font-display);font-size:var(--h2-size);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.01em;">系統已就緒，<br>開始讓它幫你工作</h2>
+      <div class="next-tags">
+        <span class="next-tag reveal">✓ Pipeline 每天 08:00 自動執行</span>
+        <span class="next-tag reveal">✓ 儀表板即時查看選題</span>
+        <span class="next-tag reveal">✓ 原始素材自己瀏覽選擇</span>
+        <span class="next-tag reveal">✓ Skills 已接進評分 + 寫稿 prompt</span>
+        <span class="next-tag reveal">✓ AI-OS 中台可無限擴充</span>
+      </div>
+      <p class="reveal" style="font-family:var(--font-mono);font-size:var(--small-size);color:rgba(255,255,255,0.45);margin-top:clamp(1.5rem,3vh,2.5rem);letter-spacing:0.08em;">@sunlee._.yabg · AntiClaude v2.0 · 2026</p>
+    </div>
+  </section>
+
+  <script>
+    class SlidePresentation {
+      constructor() {
+        this.slides = Array.from(document.querySelectorAll('.slide'));
+        this.total = this.slides.length;
+        this.current = 0;
+        this.progressBar = document.getElementById('progressBar');
+        this.keyHint = document.getElementById('keyHint');
+        this.buildNavDots();
+        this.setupIntersectionObserver();
+        this.setupKeyboard();
+        this.setupWheel();
+        this.setupTouch();
+        setTimeout(() => { if (this.keyHint) this.keyHint.style.opacity = '0'; }, 4000);
+      }
+      buildNavDots() {
+        const nav = document.getElementById('navDots');
+        if (!nav) return;
+        this.slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', `第 ${i + 1} 頁`);
+          dot.addEventListener('click', () => this.goTo(i));
+          nav.appendChild(dot);
+        });
+        this.dots = Array.from(nav.querySelectorAll('.nav-dot'));
+      }
+      setupIntersectionObserver() {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              const idx = this.slides.indexOf(entry.target);
+              if (idx !== -1) this.updateUI(idx);
+            }
+          });
+        }, { threshold: 0.5 });
+        this.slides.forEach(s => io.observe(s));
+      }
+      updateUI(idx) {
+        this.current = idx;
+        if (this.progressBar) this.progressBar.style.width = `${((idx + 1) / this.total) * 100}%`;
+        if (this.dots) this.dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }
+      goTo(idx) {
+        if (idx < 0 || idx >= this.total) return;
+        this.slides[idx].scrollIntoView({ behavior: 'smooth' });
+      }
+      setupKeyboard() {
+        document.addEventListener('keydown', e => {
+          if (['ArrowDown', 'ArrowRight', ' ', 'PageDown'].includes(e.key)) { e.preventDefault(); this.goTo(this.current + 1); }
+          else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); this.goTo(this.current - 1); }
+          else if (e.key === 'Home') { e.preventDefault(); this.goTo(0); }
+          else if (e.key === 'End') { e.preventDefault(); this.goTo(this.total - 1); }
+        });
+      }
+      setupWheel() {
+        let lastWheel = 0;
+        document.addEventListener('wheel', e => {
+          e.preventDefault();
+          const now = Date.now();
+          if (now - lastWheel < 600) return;
+          lastWheel = now;
+          this.goTo(this.current + (e.deltaY > 0 ? 1 : -1));
+        }, { passive: false });
+      }
+      setupTouch() {
+        let startY = 0;
+        document.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+        document.addEventListener('touchend', e => {
+          const diff = startY - e.changedTouches[0].clientY;
+          if (Math.abs(diff) > 50) this.goTo(this.current + (diff > 0 ? 1 : -1));
+        }, { passive: true });
+      }
+    }
+    new SlidePresentation();
+  </script>
+</body>
+</html>

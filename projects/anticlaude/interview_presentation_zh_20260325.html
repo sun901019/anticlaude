@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AntiClaude / AITOS / Flow Lab｜面試簡報</title>
+  <style>
+    :root {
+      --bg: #f6f1ea;
+      --paper: #fffdf8;
+      --text: #161616;
+      --muted: #5d584f;
+      --line: rgba(22,22,22,0.1);
+      --accent: #d85c1d;
+      --accent-soft: #ffeddc;
+      --success: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, #fff7ef 0, transparent 34%),
+        radial-gradient(circle at bottom right, #f6e6d8 0, transparent 28%),
+        var(--bg);
+    }
+    .nav {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,253,248,.88);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .nav a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    main {
+      width: min(1200px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 88px 0 48px;
+    }
+    section {
+      min-height: calc(100vh - 110px);
+      display: grid;
+      align-items: center;
+      padding: 26px 0;
+    }
+    .slide {
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,250,244,.96));
+      box-shadow: 0 24px 70px rgba(0,0,0,.08);
+      padding: 42px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide::after {
+      content: "";
+      position: absolute;
+      right: -44px;
+      bottom: -70px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(216,92,29,.16), transparent 65%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      margin: 14px 0;
+      line-height: 1.06;
+      letter-spacing: -.03em;
+    }
+    h1 { font-size: clamp(44px, 7vw, 78px); max-width: 900px; }
+    h2 { font-size: clamp(28px, 4.5vw, 50px); max-width: 860px; }
+    .lead {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    .grid2, .grid3, .grid4 {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .grid2 { grid-template-columns: 1.15fr .85fr; }
+    .grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .panel, .metric {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,.82);
+      padding: 20px;
+    }
+    .metric strong {
+      display: block;
+      font-size: clamp(28px, 3vw, 40px);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .metric span, .small {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+    li {
+      margin: 10px 0;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+    .callout {
+      border-left: 4px solid var(--accent);
+      border-radius: 18px;
+      padding: 18px 18px 18px 20px;
+      background: linear-gradient(180deg, #fff4ea, #fff9f4);
+      color: #7c3418;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+    .big {
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.25;
+      font-weight: 700;
+      max-width: 920px;
+    }
+    .success { color: var(--success); font-weight: 800; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 14px 0 26px;
+    }
+    @media (max-width: 960px) {
+      .grid2, .grid3, .grid4 { grid-template-columns: 1fr; }
+      .slide { padding: 28px 24px; border-radius: 26px; }
+      .nav {
+        width: calc(100vw - 24px);
+        overflow-x: auto;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#s1">介紹</a>
+    <a href="#s2">問題</a>
+    <a href="#s3">內容</a>
+    <a href="#s4">架構</a>
+    <a href="#s5">Flow Lab</a>
+    <a href="#s6">可靠性</a>
+    <a href="#s7">成果</a>
+    <a href="#s8">下一步</a>
+  </nav>
+
+  <main>
+    <section id="s1">
+      <div class="slide">
+        <div class="eyebrow">Interview Portfolio</div>
+        <h1>AntiClaude / AITOS / Flow Lab</h1>
+        <p class="lead">
+          我把 AI 協作、工作流審核、內容營運與電商決策整合成一套可操作的全端系統。
+          核心不是單點功能，而是把真實工作流程做成可追蹤、可審批、可維護的 operator platform。
+        </p>
+        <div class="grid4">
+          <div class="metric"><strong>351</strong><span>後端測試通過</span></div>
+          <div class="metric"><strong>16</strong><span>Dashboard 路由</span></div>
+          <div class="metric"><strong>101</strong><span>API handlers</span></div>
+          <div class="metric"><strong>1262</strong><span>workflow runs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="s2">
+      <div class="slide grid2">
+        <div>
+          <div class="eyebrow">Problem</div>
+          <h2>我想做的不是聊天介面，而是一套可控的工作系統。</h2>
+          <ul>
+            <li>AI 可以生成很多東西，但沒有治理與審核。</li>
+            <li>電商定價與採購常依賴手算或試算表。</li>
+            <li>內容、通知、審核、報表與操作分散在不同工具。</li>
+            <li>使用者很難知道現在最該做什麼。</li>
+          </ul>
+        </div>
+        <div class="callout">
+          目標是把 AI、workflow、approval、內容、電商決策，整合成一個真正可以操作的 operator system。
+        </div>
+      </div>
+    </section>
+
+    <section id="s3">
+      <div class="slide">
+        <div class="eyebrow">What I Built</div>
+        <h2>三個系統，整合在同一個平台內</h2>
+        <div class="grid3">
+          <div class="panel">
+            <h3>AITOS / AI Office</h3>
+            <ul>
+              <li>AI routing</li>
+              <li>approval / review queue</li>
+              <li>CEO decision package</li>
+              <li>workflow control</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Media Engine</h3>
+            <ul>
+              <li>topic strategy</li>
+              <li>draft generation</li>
+              <li>GEO / SEO 強化</li>
+              <li>content review</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Flow Lab</h3>
+            <ul>
+              <li>商品建檔</li>
+              <li>landed cost</li>
+              <li>Shopee 定價</li>
+              <li>組合設計與採購決策</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="s4">
+      <div class="slide">
+        <div class="eyebrow">Architecture</div>
+        <h2>從 prompt 和頁面，收斂成 workflow 與 domain logic</h2>
+        <div class="grid3">
+          <div class="panel">
+            <h3>API 層</h3>
+            <p class="small">FastAPI 路由，負責 chat、review、workflows、ecommerce、Flow Lab、Figma、reports。</p>
+          </div>
+          <div class="panel">
+            <h3>Runtime 層</h3>
+            <p class="small">workflow runs、tasks、approvals、events、checkpoints、resume / pause。</p>
+          </div>
+          <div class="panel">
+            <h3>Domain 層</h3>
+            <p class="small">media 與 flow_lab 商業邏輯逐步分離，避免所有規則都塞在 UI。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="s5">
+      <div class="slide">
+        <div class="eyebrow">Flow Lab</div>
+        <h2>把電商從試算表，做成決策引擎</h2>
+        <div class="grid2">
+          <div class="panel">
+            <h3>Bottom-Up 定價</h3>
+            <ul>
+              <li>從採購成本與落地成本出發</li>
+              <li>套用 Shopee 費率與毛利目標</li>
+              <li>推回建議售價</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Top-Down 採購天花板</h3>
+            <ul>
+              <li>從市場價出發</li>
+              <li>反推出最大可接受採購成本</li>
+              <li>幫助 1688 / QQL 議價與選品</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:18px">
+          這讓 Flow Lab 不只是算帳，而是幫操作者決定：能不能做、怎麼賣、能不能談得下來。
+        </div>
+      </div>
+    </section>
+
+    <section id="s6">
+      <div class="slide">
+        <div class="eyebrow">Reliability</div>
+        <h2>我不只做功能，也修復真正會傷害信任的問題</h2>
+        <div class="grid3">
+          <div class="panel">
+            <h3>通知 spam</h3>
+            <p class="small">用 SQLite-backed dedup 擋掉重複 LINE 通知。</p>
+          </div>
+          <div class="panel">
+            <h3>測試 publish 洩漏</h3>
+            <p class="small">修 dual publish 測試路徑，避免測試字串碰到真 Threads 發文。</p>
+          </div>
+          <div class="panel">
+            <h3>Bundle runtime 修復</h3>
+            <p class="small">修 schema / query mismatch，讓組合建議路由恢復穩定。</p>
+          </div>
+        </div>
+        <p class="big" style="margin-top:24px">
+          <span class="success">Build 綠燈。</span> 測試綠燈。操作信任感被救回來。
+        </p>
+      </div>
+    </section>
+
+    <section id="s7">
+      <div class="slide grid2">
+        <div>
+          <div class="eyebrow">Impact</div>
+          <h2>這個作品代表我具備跨層整合能力</h2>
+          <ul>
+            <li>產品與 workflow 設計</li>
+            <li>backend API / schema / domain logic</li>
+            <li>frontend operator UX</li>
+            <li>AI 治理與 human-in-the-loop</li>
+            <li>debug / reliability / test recovery</li>
+          </ul>
+        </div>
+        <div class="callout">
+          這不是靜態作品頁，而是一套有資料、有流程、有測試、有實際 runtime 問題與修復過程的系統。
+        </div>
+      </div>
+    </section>
+
+    <section id="s8">
+      <div class="slide">
+        <div class="eyebrow">Next</div>
+        <h2>現在已經可用，下一步是把它做得更成熟</h2>
+        <div class="grid3">
+          <div class="panel">
+            <h3>Backend 單一真相</h3>
+            <p class="small">把商業公式更完整收斂到後端。</p>
+          </div>
+          <div class="panel">
+            <h3>Family / Variant</h3>
+            <p class="small">更完整的商品家族與變體管理。</p>
+          </div>
+          <div class="panel">
+            <h3>Bundle Intelligence</h3>
+            <p class="small">從簡單互補推薦升級成場景與在售商品導向。</p>
+          </div>
+        </div>
+        <p class="big" style="margin-top:24px">
+          我做的是一套已經能運作、也能持續演進的 AI operator system。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>AntiClaude / AITOS / Flow Lab · 中文面試版簡報</footer>
+</body>
+</html>

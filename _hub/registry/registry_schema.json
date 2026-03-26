@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AntiClaude Registry Schema",
+  "description": "Registry 格式規範，供 orchestrator 和 agent 讀取",
+  "version": "1.0.0",
+  "created": "2026-03-16",
+
+  "definitions": {
+
+    "Agent": {
+      "type": "object",
+      "required": ["id", "name", "role", "capabilities"],
+      "properties": {
+        "id":           { "type": "string", "description": "唯一識別碼，如 ori、lala、craft" },
+        "name":         { "type": "string", "description": "顯示名稱" },
+        "role":         { "type": "string", "description": "角色定位描述" },
+        "capabilities": { "type": "array", "items": { "type": "string" }, "description": "此 agent 能執行的任務類型" },
+        "required_skills": { "type": "array", "items": { "type": "string" } },
+        "output_artifacts": { "type": "array", "items": { "type": "string" } },
+        "handoff_to":   { "type": "array", "items": { "type": "string" }, "description": "完成後交接給哪些 agent" },
+        "agent_file":   { "type": "string", "description": "_hub/shared/agents/ 下的定義文件路徑" }
+      }
+    },
+
+    "Skill": {
+      "type": "object",
+      "required": ["id", "name", "agents"],
+      "properties": {
+        "id":          { "type": "string" },
+        "name":        { "type": "string" },
+        "description": { "type": "string" },
+        "agents":      { "type": "array", "items": { "type": "string" }, "description": "哪些 agent 會用到此 skill" },
+        "skill_file":  { "type": "string", "description": "_hub/shared/skills/ 下的定義文件路徑" },
+        "type":        { "type": "string", "enum": ["composite", "atomic", "reference"] },
+        "source_repos": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "Task": {
+      "type": "object",
+      "required": ["type", "owner_agent"],
+      "properties": {
+        "type":         { "type": "string", "description": "任務類型，如 content_research、draft_generation" },
+        "owner_agent":  { "type": "string", "description": "主責 agent ID" },
+        "required_skills": { "type": "array", "items": { "type": "string" } },
+        "input_schema": { "type": "string", "description": "輸入格式說明" },
+        "output_artifact": { "type": "string", "description": "輸出產物位置" },
+        "handoff_next": { "type": "string", "description": "完成後交接給誰" },
+        "priority":     { "type": "string", "enum": ["p0", "p1", "p2", "p3"] }
+      }
+    },
+
+    "Handoff": {
+      "type": "object",
+      "required": ["from_agent", "to_agent", "artifact"],
+      "properties": {
+        "from_agent": { "type": "string" },
+        "to_agent":   { "type": "string" },
+        "artifact":   { "type": "string", "description": "交接的產物或文件" },
+        "context":    { "type": "string" },
+        "timestamp":  { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+
+  "routing_rules": {
+    "description": "任務類型 → agent 的路由對照",
+    "mappings": [
+      { "task_type": "content_research",      "agent": "ori" },
+      { "task_type": "market_analysis",       "agent": "ori" },
+      { "task_type": "topic_strategy",        "agent": "lala" },
+      { "task_type": "content_planning",      "agent": "lala" },
+      { "task_type": "draft_generation",      "agent": "craft" },
+      { "task_type": "copywriting",           "agent": "craft" },
+      { "task_type": "seo_analysis",          "agent": "sage" },
+      { "task_type": "data_analysis",         "agent": "sage" },
+      { "task_type": "competitor_analysis",    "agent": "ori" },
+      { "task_type": "audience_analysis",     "agent": "lala" },
+      { "task_type": "product_evaluation",    "agent": "sage" },
+      { "task_type": "ui_implementation",     "agent": "lumi" },
+      { "task_type": "backend_development",   "agent": "lumi" },
+      { "task_type": "system_debugging",      "agent": "lumi" },
+      { "task_type": "ux_review",             "agent": "pixel" },
+      { "task_type": "design_evaluation",     "agent": "pixel" }
+    ]
+  }
+}

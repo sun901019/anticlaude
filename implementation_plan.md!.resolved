@@ -1,0 +1,118 @@
+# Phase 4 Implementation Plan: Agent 充實 + Codex 整合 + 架構治理
+
+## 現況盤點
+
+Claude Code 已經完成大量優秀的基礎建設（Phase 1-3 + 部分 Phase 4）：
+
+### ✅ 已完成（不需要再動）
+
+| 項目 | 狀態 | 備註 |
+|------|------|------|
+| 9 repo clone | ✅ | `_hub/skills_library/` |
+| Skills 合併為 4 大指南 | ✅ | `writing_guide.md`, `strategy_guide.md`, `dev_tools.md`, `coding_agent.md` |
+| 舊 skills 歸檔 | ✅ | 移至 `_hub/shared/skills/_archive/` |
+| 2 核心 Agent 詳細版 | ✅ | `threads-writer.md`, `content-strategist.md` |
+| 5 通用 Agent 骨架版 | ✅ | `market_research_agent.md` 等 |
+| 4 Registry 索引 | ✅ | `skills_registry`, `agents_registry`, `tools_registry`, `capability_map` |
+| CLAUDE.md 路由規則 | ✅ | Agent 自動派遣 + 上下文載入 |
+
+### 🔲 待完成（本次 Phase 4 範圍）
+
+| 項目 | 說明 |
+|------|------|
+| **充實 5 個骨架 Agent** | 目前只有 YAML header + 2 行描述，需要像 `threads-writer.md` 一樣充實 |
+| **加入 Codex 執行引擎** | 新增 Codex 路由邏輯到 CLAUDE.md 和 capability_map |
+| **更新 Registry 反映現況** | `skills_registry` 仍列 9 個舊 skill 名稱，需更新為 4 大指南 |
+| **更新 capability_map** | 路由表需反映合併後的 skill 名稱 |
+| **變更日誌** | 產出一份 changelog 讓 Claude Code 知道所有異動 |
+
+---
+
+## Proposed Changes
+
+### Component 1: Agent 充實化
+
+> [!IMPORTANT]
+> 5 個骨架 Agent 需要升級到與 `threads-writer.md` 同等品質，包含：角色定義、性格、能力清單、工作流程、限制、Prompt 範本。
+
+#### [MODIFY] [market_research_agent.md](file:///c:/Users/sun90/Anticlaude/_hub/shared/agents/market_research_agent.md)
+- 加入：角色性格（數據驅動、挖掘台灣角度）
+- 加入：完整工作流程（素材來源 → 5 維度評估 → 輸出格式）
+- 加入：使用的 Skills 改為 `strategy_guide`
+- 加入：Prompt 範本
+
+#### [MODIFY] [marketing_strategy_agent.md](file:///c:/Users/sun90/Anticlaude/_hub/shared/agents/marketing_strategy_agent.md)
+- 加入：週選題規劃完整流程
+- 加入：與 `audience_insights` 資料庫的互動邏輯
+- 加入：使用的 Skills 改為 `strategy_guide`
+
+#### [MODIFY] [content_agent.md](file:///c:/Users/sun90/Anticlaude/_hub/shared/agents/content_agent.md)
+- 加入：多格式輸出邏輯（Threads / 投影片 / 文件）
+- 加入：使用的 Skills 改為 `writing_guide` + `dev_tools`
+
+#### [MODIFY] [planning_agent.md](file:///c:/Users/sun90/Anticlaude/_hub/shared/agents/planning_agent.md)
+- 加入：AntiClaude 專案的 WBS 模板
+- 加入：生成 `claude_code_*.md` 任務檔的流程
+
+#### [MODIFY] [coding_agent.md](file:///c:/Users/sun90/Anticlaude/_hub/shared/agents/coding_agent.md)
+- 加入：區分 Claude Code vs Codex 的任務路由
+- 加入：AntiClaude 技術規範（FastAPI / Next.js / SQLite）
+
+---
+
+### Component 2: Codex 執行引擎整合
+
+#### [MODIFY] [CLAUDE.md](file:///c:/Users/sun90/Anticlaude/CLAUDE.md)
+新增「執行引擎選擇規則」段落：
+```
+| 任務類型 | 引擎 | 原因 |
+|---------|------|------|
+| 跨檔案重構 | Claude Code | 需要全局理解 |
+| 新增 API endpoint | Claude Code | 需要理解架構 |
+| 簡單 bug fix | Codex | 快速修復 |
+| 生成測試 | Codex | 批量重複性工作 |
+| UI 微調 | Codex | 單檔小改動 |
+```
+
+#### [NEW] [codex_integration.md](file:///c:/Users/sun90/Anticlaude/_hub/shared/tools/codex_integration.md)
+- Codex 的角色定義、使用時機、限制
+- 與 Claude Code 的分工邊界
+
+---
+
+### Component 3: Registry 更新（反映 Claude Code 的合併）
+
+#### [MODIFY] [skills_registry.md](file:///c:/Users/sun90/Anticlaude/_hub/registry/skills_registry.md)
+- 從 9 個舊 skill → 4 大指南 + `seo_optimization` + `project_planning`
+- 標示 `replaces` 關係
+
+#### [MODIFY] [capability_map.md](file:///c:/Users/sun90/Anticlaude/_hub/registry/capability_map.md)
+- 路由表中的 skill 名稱更新
+- 加入 Codex 路由
+
+#### [MODIFY] [agents_registry.md](file:///c:/Users/sun90/Anticlaude/_hub/registry/agents_registry.md)
+- 更新 agent 使用的 skills 名稱
+
+#### [MODIFY] [tools_registry.md](file:///c:/Users/sun90/Anticlaude/_hub/registry/tools_registry.md)
+- 加入 Codex 為執行工具
+
+---
+
+### Component 4: 變更日誌（給 Claude Code 看的）
+
+#### [NEW] [changelog_phase4.md](file:///c:/Users/sun90/Anticlaude/_hub/changelog_phase4.md)
+- 記錄所有 Antigravity 做的異動
+- 讓 Claude Code 知道哪些檔案改了、為什麼改
+
+---
+
+## Verification Plan
+
+### 一致性檢查
+- `CLAUDE.md` 的路由表 → 與 `capability_map.md` 一致
+- `agents_registry.md` 的 Skills 欄位 → 與實際 agent 檔案的 YAML header 一致
+- 所有 agent 引用的 skill 檔案 → 確實存在於 `_hub/shared/skills/`
+
+### 功能驗證
+- 用一個模擬任務：「幫我分析今天有什麼 AI 新聞值得發」
+- 檢查路由表是否正確導向 `content-strategist` → `strategy_guide` skill
