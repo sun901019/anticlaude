@@ -45,6 +45,9 @@ _context/ecommerce_v2.md
 .agents/
 uploads/
 
+# 私人專案文件
+projects/
+
 # 個人業務資料
 *.xlsx
 *.xls
