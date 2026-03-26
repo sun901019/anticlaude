@@ -1,35 +1,55 @@
-# AntiClaude — 個人品牌內容自動化系統
+# AntiClaude — 個人品牌與電商自動化平台
 
-> 每天打開就能看到 AI 幫你抓好的素材、評好分、寫好文案、追蹤好數據。
+> 結合多代理人（Multi-Agent）與自研圖形工作流引擎的 AI 基礎設施。
+> 每天幫你：抓素材、聚類選題、評分排序、文案產出、一鍵發文與電商數據分析。
+
+## 系統架構
+
+- **Backend**: Python 3.12 (FastAPI), SQLite, 自研 `GraphRunner` DAG 工作流。
+- **Frontend**: Next.js 14 (App Router), Tailwind CSS, Framer Motion。
+- **AI 引擎**: Claude Sonnet 4.6 (主力) / GPT-4o / Gemini Flash。
 
 ## 快速開始
-```bash
-# 1. 安裝依賴
+
+### 1. 後端 (FastAPI)
+```powershell
+# 安裝依賴
 pip install -r requirements.txt
 
-# 2. 設定 API Key
-cp .env.example .env
-# 填入你的 Key
+# 設定環境變數 (.env)
+Copy-Item .env.example .env
 
-# 3. 跑一次
-python src/pipeline.py
-
-# 4. 打開儀表板
-streamlit run src/dashboard/app.py
+# 啟動後端伺服器 (包含排程器)
+.\start.ps1
 ```
 
-## 資料夾結構
-| 資料夾 | 用途 |
-|--------|------|
-| `_context/` | AI 記憶檔（你的定位、流程、API 對照） |
-| `uploads/` | 原始素材（截圖、連結、語音） |
-| `outputs/` | 系統產出（報告、草稿、數據） |
-| `projects/` | 長期項目（各自有 uploads + outputs） |
-| `skills/` | 後續安裝的 AI skills |
+### 2. 前端 (Next.js Dashboard)
+```powershell
+cd dashboard
+npm install
+npm run dev
+```
 
-## 文件索引
-- [`_context/about_me.md`](./_context/about_me.md) — 個人定位與受眾
-- [`_context/workflow.md`](./_context/workflow.md) — 自動化流程
-- [`_context/api_reference.md`](./_context/api_reference.md) — API 對照表
-- [`folder_structure.md`](./folder_structure.md) — 資料夾結構詳解
-- [`system_architecture.md`](./system_architecture.md) — 系統架構
+打開 [http://localhost:3000](http://localhost:3000) 即可進入 CEO 儀表板。
+
+## 主要服務層
+| 模組/目錄 | 職責 |
+|--------|------|
+| `src/api/` | FastAPI 路由與自動化排程入口 |
+| `src/agents/` | 代理人定義（CEO, Cluster, Score, Strategy） |
+| `src/domains/` | 領域業務邏輯（自媒體 `media`、電商視覺 `flow_lab`） |
+| `src/workflows/`| 自研圖形化工作流引擎（含 Checkpoint 與人工審核閘門） |
+| `dashboard/` | Next.js 14 管理後台（16 個業務與分析指標面板） |
+| `ai/` | 開發與協作紀錄（Codex 狀態同步） |
+
+## 核心工作流
+本系統主要以 Daily Content Pipeline 為主軸：
+1. **內容研究 (Ori)**：整合 RSS, Perplexity, Serper 抓取資訊。
+2. **主題聚類 (Ori)**：Claude 語意聚類 + 去重過濾。
+3. **評分排序 (Lala)**：以 Orio 三維公式計算最適合的內容。
+4. **策略選題與草稿 (Lala/Craft)**：挑選 Top 3 並匯入 GEO Skill 產出 Thread 草稿。
+5. **人工決策 (CEO)**：在 Dashboard 進行最後發布或退回審閱。
+6. **對外發布與分析**：Threads Graph API 推播與互動追蹤。
+
+---
+*詳細專案文件請參閱 `projects/anticlaude/` 目錄。*
